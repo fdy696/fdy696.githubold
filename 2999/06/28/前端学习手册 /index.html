@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="个人感悟," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="前端学习手册标签（空格分隔）： web前端 html css javascript   第一章初级课程第一天 htmlHTTP协议 段落引用 html是纯文本段落  html骨架DTD文档类型head标签body标签html基本语法h系列的标签p标签img标签a标签div和span含义第二天 html无序列表有序列表定义列表表格基础合并单元格三个划分区域的语义标签form标签input标签单行文本">
+<meta name="keywords" content="个人感悟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="今生一场不断向上的修行">
+<meta property="og:url" content="http://yoursite.com/2999/06/28/前端学习手册 /index.html">
+<meta property="og:site_name" content="读墨">
+<meta property="og:description" content="前端学习手册标签（空格分隔）： web前端 html css javascript   第一章初级课程第一天 htmlHTTP协议 段落引用 html是纯文本段落  html骨架DTD文档类型head标签body标签html基本语法h系列的标签p标签img标签a标签div和span含义第二天 html无序列表有序列表定义列表表格基础合并单元格三个划分区域的语义标签form标签input标签单行文本">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-01T12:18:16.239Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="今生一场不断向上的修行">
+<meta name="twitter:description" content="前端学习手册标签（空格分隔）： web前端 html css javascript   第一章初级课程第一天 htmlHTTP协议 段落引用 html是纯文本段落  html骨架DTD文档类型head标签body标签html基本语法h系列的标签p标签img标签a标签div和span含义第二天 html无序列表有序列表定义列表表格基础合并单元格三个划分区域的语义标签form标签input标签单行文本">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2999/06/28/前端学习手册 /"/>
+
+
+
+
+
+  <title>今生一场不断向上的修行 | 读墨</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">读墨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">smile to your life</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            博客首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            主题分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            文章标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于小北
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-resume">
+          <a href="/resume" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            个人简历
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2999/06/28/前端学习手册 /">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="夏小北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读墨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">今生一场不断向上的修行</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2999-06-28T12:06:24+08:00">
+                2999-06-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/个人感悟/" itemprop="url" rel="index">
+                    <span itemprop="name">个人感悟</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前端学习手册"><a href="#前端学习手册" class="headerlink" title="前端学习手册"></a>前端学习手册</h1><p>标签（空格分隔）： web前端 html css javascript </p>
+<hr>
+<h2 id="第一章初级课程"><a href="#第一章初级课程" class="headerlink" title="第一章初级课程"></a>第一章初级课程</h2><h3 id="第一天-html"><a href="#第一天-html" class="headerlink" title="第一天 html"></a>第一天 html</h3><h4 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h4><blockquote>
+<p>段落引用</p>
+<h4 id="html是纯文本"><a href="#html是纯文本" class="headerlink" title="html是纯文本"></a>html是纯文本</h4><p>段落</p>
+</blockquote>
+<h4 id="html骨架"><a href="#html骨架" class="headerlink" title="html骨架"></a>html骨架</h4><h4 id="DTD文档类型"><a href="#DTD文档类型" class="headerlink" title="DTD文档类型"></a>DTD文档类型</h4><h4 id="head标签"><a href="#head标签" class="headerlink" title="head标签"></a>head标签</h4><h4 id="body标签"><a href="#body标签" class="headerlink" title="body标签"></a>body标签</h4><h4 id="html基本语法"><a href="#html基本语法" class="headerlink" title="html基本语法"></a>html基本语法</h4><h4 id="h系列的标签"><a href="#h系列的标签" class="headerlink" title="h系列的标签"></a>h系列的标签</h4><h4 id="p标签"><a href="#p标签" class="headerlink" title="p标签"></a>p标签</h4><h4 id="img标签"><a href="#img标签" class="headerlink" title="img标签"></a>img标签</h4><h4 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a>a标签</h4><h4 id="div和span含义"><a href="#div和span含义" class="headerlink" title="div和span含义"></a>div和span含义</h4><h3 id="第二天-html"><a href="#第二天-html" class="headerlink" title="第二天 html"></a>第二天 html</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><h4 id="定义列表"><a href="#定义列表" class="headerlink" title="定义列表"></a>定义列表</h4><h4 id="表格基础"><a href="#表格基础" class="headerlink" title="表格基础"></a>表格基础</h4><h4 id="合并单元格"><a href="#合并单元格" class="headerlink" title="合并单元格"></a>合并单元格</h4><h4 id="三个划分区域的语义标签"><a href="#三个划分区域的语义标签" class="headerlink" title="三个划分区域的语义标签"></a>三个划分区域的语义标签</h4><h4 id="form标签"><a href="#form标签" class="headerlink" title="form标签"></a>form标签</h4><h4 id="input标签"><a href="#input标签" class="headerlink" title="input标签"></a>input标签</h4><h4 id="单行文本框"><a href="#单行文本框" class="headerlink" title="单行文本框"></a>单行文本框</h4><h4 id="密码框"><a href="#密码框" class="headerlink" title="密码框"></a>密码框</h4><h4 id="单选框"><a href="#单选框" class="headerlink" title="单选框"></a>单选框</h4><h4 id="多选框"><a href="#多选框" class="headerlink" title="多选框"></a>多选框</h4><h4 id="文本域"><a href="#文本域" class="headerlink" title="文本域"></a>文本域</h4><h4 id="下拉菜单"><a href="#下拉菜单" class="headerlink" title="下拉菜单"></a>下拉菜单</h4><h4 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h4><h3 id="第3天-css"><a href="#第3天-css" class="headerlink" title="第3天 css"></a>第3天 css</h3><p>1、html注释<br>2、废弃标签<br>3、实体字符<br>4、css的概念<br>5、css的作用<br>6、css的样式<br>7、css的书写位置<br>8、基础选择<br>9、高级选择器<br>10、css的继承性<br>11、css的层叠性</p>
+<h3 id="第4天-css"><a href="#第4天-css" class="headerlink" title="第4天 css"></a>第4天 css</h3><p>1、color属性<br>2、font-size属性<br>3、font-family属性<br>4、line-height属性<br>5、font-weight属性<br>6、font-style属性<br>7、text-indent属性<br>8、text-align属性<br>9、text-decoration属性<br>10、盒模型的初步认识<br>11、padding详解<br>12、margin详解<br>13、border详解</p>
+<h3 id="第5天-css"><a href="#第5天-css" class="headerlink" title="第5天 css"></a>第5天 css</h3><p>1、盒模型的拓展知识<br>2、清除默认样式<br>3、宽度剩余法<br>4、height高度设置法<br>5、margin特性之垂直方向上的塌陷<br>6、margin特性之不能用儿子去踹父亲<br>7、父子盒模型的特性<br>8、居中的几种设置方法<br>9、认识标准文档流<br>10、标准文档流的特性<br>11、块级元素和行内元素的特性<br>12、浮动的基础知识</p>
+<h3 id="第6天-css"><a href="#第6天-css" class="headerlink" title="第6天 css"></a>第6天 css</h3><p>1、浮动的作用<br>2、浮动的特性之浮动的元素脱离标准文档流<br>3、浮动的特性之浮动的元素没有margin塌陷<br>4、浮动的特性之浮动的元素依次贴边<br>5、浮动的特性之浮动的元素让出标准流的位置<br>6、浮动的特性之字围效果<br>7、浮动存在的问题<br>8、清除浮动的方法之给父盒子加高度<br>9、清除浮动的方法之加clear属性<br>10、清除浮动的方法之加隔墙法<br>11、清除浮动的方法之overflow法</p>
+<h3 id="第7天-css"><a href="#第7天-css" class="headerlink" title="第7天 css"></a>第7天 css</h3><p>1、a标签的伪类<br>2、a标签伪类的顺序不能颠倒<br>3、a标签伪类的应用实例之按钮实例<br>4、a标签伪类的应用实例之导航栏实例<br>5、background-color背景色的详解<br>6、background-image背景图的详解<br>7、background-repeat背景重复的详解<br>8、background-position背景定位的详解<br>9、精灵图的使用方法及案例<br>10、background-attachment背景固定的详解<br>11、背景的应用之文字换图片案例<br>12、背景的应用之padding设置背景图案例</p>
+<h3 id="第8天-css"><a href="#第8天-css" class="headerlink" title="第8天 css"></a>第8天 css</h3><p>1、position：relative的详解<br>2、position：relative的负值表示法<br>3、position：relative的应用之元素位置微调的实例<br>4、position：absolute的详解<br>5、position：absolute的特性之不针对祖先元素的定位参考点<br>6、position：absolute的特性之祖先元素有定位的参考点<br>7、position：absolute的特性之绝对定位的顶点<br>8、position：absolute的特性之利用绝对定位制作压盖效果<br>9、position：absolute的特性之绝对定位的元素设置水平居中<br>10、position：absolute的实例之滚动轮播图<br>11、position：fixed的详解<br>12、z-index属性的详解<br>13、html hack的详解<br>14、css值hack的详解<br>15、css选择器hack的详解<br>16、IE6的兼容性问题</p>
+<h3 id="第9天-项目实战"><a href="#第9天-项目实战" class="headerlink" title="第9天 项目实战"></a>第9天 项目实战</h3><p>1、制作博客页面<br>2、分析页面的结构<br>3、搭建html结构代码<br>4、搭建css样式代码</p>
+<h3 id="第10天-html5"><a href="#第10天-html5" class="headerlink" title="第10天 html5"></a>第10天 html5</h3><p>1、html5的简介<br>2、HTML5的新骨架和语义化标签<br>3、新的input控件<br>4、placeholder属性的详解<br>5、autofocus属性的详解<br>6、datalist标签的详解<br>7、video标签的详解<br>8、audio标签的详解<br>9、css3的简介<br>10、属性选择器的详解<br>11、儿子序选择器的详解<br>12、儿子类型序选择器的详解<br>13、节点关系选择器的详解</p>
+<h3 id="第11天-css3"><a href="#第11天-css3" class="headerlink" title="第11天 css3"></a>第11天 css3</h3><p>1、伪类的应用<br>2、伪元素的应用<br>3、border-radius属性的详解<br>4、box-shadow属性的详解<br>5、text-shadow属性的详解<br>6、background-origin属性的详解<br>7、background-clip属性的详解<br>8、background-size属性的详解<br>9、渐变背景的详解<br>10、多背景的详解</p>
+<h3 id="第12天-css3"><a href="#第12天-css3" class="headerlink" title="第12天 css3"></a>第12天 css3</h3><p>1、过渡的基础知识<br>2、2D变形的详解<br>3、@keyframes规则的详解<br>4、animation属性的详解<br>5、animation属性制作动画的实例<br>6、box-sizing属性的详解<br>7、响应式布局的详解<br>8、百分比布局的详解<br>9、固比固模型的详解<br>10、媒体查询的详解</p>
+<h3 id="第13天-BootStrap"><a href="#第13天-BootStrap" class="headerlink" title="第13天 BootStrap"></a>第13天 BootStrap</h3><p>1、Bootstrap使用步骤<br>2、Bootstrap栅格系统的详解<br>3、Bootstrap栅格系统的实例<br>4、Bootstrap的排版之内联子标题<br>5、Bootstrap的排版之引导主体副本<br>6、Bootstrap的排版之对齐类<br>7、Bootstrap的排版之强调类<br>8、Bootstrap的表单使用及实例<br>9、Bootstrap的按钮，图片的使用及实例<br>10、Bootstrap的字体图标<br>11、Bootstrap的导航等工具的使用及实例</p>
+<h3 id="第14天-项目实战"><a href="#第14天-项目实战" class="headerlink" title="第14天 项目实战"></a>第14天 项目实战</h3><p>1、制作线上项目的页面<br>2、分析页面的结构<br>3、搭建html结构代码<br>4、搭建css样式代码</p>
+<h3 id="第15天-项目实战"><a href="#第15天-项目实战" class="headerlink" title="第15天 项目实战"></a>第15天 项目实战</h3><p>1、制作线上项目移动端的页面<br>2、分析页面的结构<br>3、搭建html结构代码<br>4、搭建css样式代码</p>
+<h3 id="第16天-js基础"><a href="#第16天-js基础" class="headerlink" title="第16天 js基础"></a>第16天 js基础</h3><p>1、Javascript简介<br>2、Javascript的书写位置<br>3、alert语句<br>4、console.log（）语句<br>5、数字字面量<br>6、字符串字面量<br>7、变量的声明<br>8、变量的赋值<br>9、变量声明的提升<br>10、数据类型的检测方法<br>11、数据类型的转换方法</p>
+<h3 id="第17天-js基础"><a href="#第17天-js基础" class="headerlink" title="第17天 js基础"></a>第17天 js基础</h3><p>1、数学运算符<br>2、Math对象的几种方法<br>3、比较运算符<br>4、逻辑运算符<br>5、赋值运算符<br>6、综合运算的顺序<br>7、if语句的详解<br>8、三元运算符的详解<br>9、switch语句的详解</p>
+<h3 id="第18天-js基础"><a href="#第18天-js基础" class="headerlink" title="第18天 js基础"></a>第18天 js基础</h3><p>1、for循环语句的详解<br>2、穷举思想的详解<br>3、累加器和累成器的实例<br>4、do while语句的详解<br>5、while语句的详解<br>6、break用法的详解<br>7、continue用法的详解<br>8、函数语句的声明<br>9、函数语句的调用</p>
+<h3 id="第19天-js基础"><a href="#第19天-js基础" class="headerlink" title="第19天 js基础"></a>第19天 js基础</h3><p>1、函数的参数详解<br>2、函数的返回值的详解<br>3、函数表达式<br>4、函数的数据类型<br>5、函数声明的提升<br>6、递归函数的详解<br>7、变量的作用域<br>8、局部变量和全局变量的详解<br>9、作用域链的详解<br>10、函数的作用域<br>11、闭包的详解<br>12、数组的基础知识<br>13、数组的遍历</p>
+<a id="more"></a>
+<h3 id="第20天-js基础"><a href="#第20天-js基础" class="headerlink" title="第20天 js基础"></a>第20天 js基础</h3><p>1、数组的首尾操作方法<br>2、数组的合并和拆分方法<br>3、数组的删除方法<br>4、数组的插入方法<br>5、数组的替换方法<br>6、数组的排序方法<br>7、数组转换为字符串的方法<br>8、charAt（）方法的详解<br>9、concat（）方法的详解<br>10、indexOf（）方法的详解<br>11、slice（）方法的详解<br>12、split（）方法的详解<br>13、substr（）方法的详解<br>14、substring（）方法的详解<br>15、toLowerCase（）方法的详解<br>16、toUpperCase（）方法的详解</p>
+<h3 id="第21天-js基础"><a href="#第21天-js基础" class="headerlink" title="第21天 js基础"></a>第21天 js基础</h3><p>1、正则表达式的概念<br>2、正则表达式的精确匹配<br>3、正则表达式的预定义特殊字符<br>4、正则表达式的字符集<br>5、正则表达式的修饰符<br>6、正则表达式的边界<br>7、正则表达式的预定义类<br>8、正则表达式的量词<br>9、正则表达式的分组<br>10、正则表达式的或操作符<br>11、正则表达式分组的反向引用<br>12、正则表达式的中文<br>13、正则表达式的实例</p>
+<h3 id="第22天-js基础"><a href="#第22天-js基础" class="headerlink" title="第22天 js基础"></a>第22天 js基础</h3><p>1、arguments的详解<br>2、IIFE的详解<br>3、结合数组观察闭包<br>4、DOM的基础知识<br>5、操作html的方法<br>6、操作css的方法<br>7、DOM中事件的几种方法<br>8、setInterval（）方法的详解</p>
+<h3 id="第23天"><a href="#第23天" class="headerlink" title="第23天"></a>第23天</h3><p>1、getElementsByTagName（）方法的详解<br>2、批量添加事件监听的方法<br>3、对应思想的实例<br>4、排他思想的实例<br>6、getElementsById（）方法的详解<br>5、getComputedStyle（）方法的详解<br>6、currentStyle（）方法的详解<br>7、对象基础知识<br>8、JSON的基础知识<br>9、JSON的遍历方法</p>
+<h3 id="第24天-jQuery第一天"><a href="#第24天-jQuery第一天" class="headerlink" title="第24天 jQuery第一天"></a>第24天 jQuery第一天</h3><p>1、jQuery简介<br>2、使用方式<br>3、$函数</p>
+<blockquote>
+<p>段落引用</p>
+</blockquote>
+<p>4、jQuery对象<br>5、选择器<br>6、jQuery函数<br>7、常见方法<br>8、css方法<br>9、show方法、hide方法<br>10、slideDown方法、slideUp方法<br>11、fadeIn方法、fadeOut方法<br>12、html方法<br>13、addClass方法、removeClass方法<br>14、attr方法<br>15、节点关系<br>16、$(this)<br>17、parent()<br>18、children()<br>19、siblings()<br>20、连续打点<br>21、其他节点关系方法</p>
+<h3 id="第25天-jQuery第二天"><a href="#第25天-jQuery第二天" class="headerlink" title="第25天 jQuery第二天"></a>第25天 jQuery第二天</h3><p>1、jQuery中的序号<br>2、eq()<br>3、index()<br>4、对应<br>5、each()方法<br>6、animate()方法<br>7、animate()方法概述<br>8、哪些属性能够参与动画<br>9、动画的顺序<br>10、回调函数<br>11、delay()延迟<br>12、stop()方法<br>13、动画积累的防止<br>14、交叉淡入淡出轮播</p>
+<h3 id="第26天-jQuery第三天"><a href="#第26天-jQuery第三天" class="headerlink" title="第26天 jQuery第三天"></a>第26天 jQuery第三天</h3><p>1、火车法轮播图<br>2、布局和CSS<br>3、按钮事件<br>4、三位置法轮播图<br>5、布局和css<br>6、按钮事件<br>7、小圆点事件<br>8、间歇模型</p>
+<h3 id="第27天-jQuery第四天"><a href="#第27天-jQuery第四天" class="headerlink" title="第27天 jQuery第四天"></a>第27天 jQuery第四天</h3><p>1、篮球计分系统<br>2、普通思维<br>3、数组思维<br>4、异形滚动<br>5、布局和css<br>6、分析<br>7、按钮功能完成</p>
+<h3 id="第28天-jQuery第五天"><a href="#第28天-jQuery第五天" class="headerlink" title="第28天 jQuery第五天"></a>第28天 jQuery第五天</h3><p>1、项目实战 </p>
+<h3 id="第29天-JavaScript进阶第一天"><a href="#第29天-JavaScript进阶第一天" class="headerlink" title="第29天 JavaScript进阶第一天"></a>第29天 JavaScript进阶第一天</h3><p>1、DOM深入<br> 2、概述<br> 3、DOM访问<br> 4、属性访问和设置<br> 5、节点关系<br>6、子节点属性childNodes<br>7、firstChild和lastChild属性<br>8、parentNode属性<br>9、nextSibling和prevSibling属性<br>10、节点操作<br>11、创建节点和上树<br>12、移动节点<br>13、删除节点 removeChild()方法<br>14、替换节点 replaceChild()方法<br>15、克隆节点 cloneNode()方法<br>16、jQuery中的节点操作<br>17、创建节点<br> 18、上树的8种方法<br> 19、wrap()和unwrap()、wrapAll()<br> 20、replaceWith()和replaceAll()方法<br> 21、empty()和remove()方法<br> 22、clone()方法<br> 23、拼图轮播</p>
+<h3 id="第30天-JavaScript进阶第二天"><a href="#第30天-JavaScript进阶第二天" class="headerlink" title="第30天 JavaScript进阶第二天"></a>第30天 JavaScript进阶第二天</h3><p>1、事件流<br> 2、事件流概述<br> 3、DOM0级事件监听方法<br> 4、DOM2级事件监听<br> 5、低版本IE的事件添加<br> 6、事件绑定小轮子<br>7、event事件对象<br> 8、IE6、7、8的兼容问题<br> 9、通用属性<br> 10、阻止事件冒泡<br> 11、阻止默认事件<br> 12、讲解三个案例<br>13、鼠标位置</p>
+<h3 id="第31天-JavaScript进阶第三天"><a href="#第31天-JavaScript进阶第三天" class="headerlink" title="第31天 JavaScript进阶第三天"></a>第31天 JavaScript进阶第三天</h3><p>1、复习<br>2、原生JS的元素位置和尺寸<br>3、认识offsetParent<br> 4、offsetTop和offsetLeft<br> 5、在页面中的净位置<br> 6、clientWidth、clientHeight、offsetWidth、offsetWidth<br>7、拖拽<br>8、去掉监听<br>9、jQuery中的事件<br> 10、jQuery中的同名事件是不会覆盖的<br> 11、$(document).ready()<br> 12、jQuery的事件相关方法</p>
+<h3 id="第32天-JavaScript进阶第四天"><a href="#第32天-JavaScript进阶第四天" class="headerlink" title="第32天 JavaScript进阶第四天"></a>第32天 JavaScript进阶第四天</h3><p>1、复习<br>2、鼠标滚轮事件<br>3、Onmousewheel<br>4、火狐中的鼠标滚轮事件<br>5、滚轮的滚动方向与速度<br>6、区别<br>7、onscroll事件<br>8、页面的卷动值<br>9、京东导航<br>10、头像裁剪布局<br>11、键盘事件<br>12、键盘对象<br>13、fromCharCode<br>14、小钢琴</p>
+<h3 id="第33天-JavaScript进阶第六天"><a href="#第33天-JavaScript进阶第六天" class="headerlink" title="第33天 JavaScript进阶第六天"></a>第33天 JavaScript进阶第六天</h3><p>1、ECMA中的数据类型<br>2、对象<br>3、delete关键字<br>4、如何快速创建相似对象<br>5、构造函数<br>6、方法和属性<br>7、原型<br>8、hasOwnProperty方法<br>9、instanceof关键字<br>10、继承<br>11、构造函数式继承<br>12、类式继承<br>13、组合式继承<br>14、贪吃蛇游戏<br>15、分析</p>
+<h3 id="第34天-JavaScript进阶第七天"><a href="#第34天-JavaScript进阶第七天" class="headerlink" title="第34天 JavaScript进阶第七天"></a>第34天 JavaScript进阶第七天</h3><p>1、中介者模式<br>2、贪吃蛇游戏<br>3、游戏类<br>4、蛇类<br>5、食物类<br>6、障碍类</p>
+<h3 id="第35天-PHP入门第一天"><a href="#第35天-PHP入门第一天" class="headerlink" title="第35天 PHP入门第一天"></a>第35天 PHP入门第一天</h3><p>1、服务器<br>2、Apache服务器<br>3、数据库<br>4、Mysql数据库<br>5、后台语言<br>6、php<br>7、前台语言<br>8、js<br>9、一键安装<br>10、php语法<br>11、Php标签<br>12、Php书写位置<br>13、Php输出</p>
+<h3 id="第36天-Ajax企业级项目开发第一天"><a href="#第36天-Ajax企业级项目开发第一天" class="headerlink" title="第36天 Ajax企业级项目开发第一天"></a>第36天 Ajax企业级项目开发第一天</h3><p>1、http请求<br>2、Get请求<br>3、Post请求<br>4、GET请求和POST请求带参数发送<br>5、AJAX简介<br>6、什么叫ajax？<br>7、XHR对象<br>8、字符串转化的三种方式<br>9、Eval<br>10、JSON.parse<br>11、new Function<br>12、封装轮子<br>13、表单序列化和对象化</p>
+<h3 id="第37天-Ajax企业级项目开发第二天undefined"><a href="#第37天-Ajax企业级项目开发第二天undefined" class="headerlink" title="第37天 Ajax企业级项目开发第二天undefined"></a>第37天 Ajax企业级项目开发第二天undefined</h3><p>1、jQuery中的ajax<br>2、$.get<br>3、$.post<br>4、$.ajax<br>5、缓存问题与解决<br>6、得到JSON后改变DOM<br>7、模板与字典<br>8、Underscore<br>9、Each方法<br>10、Filter方法<br>11、Contains方法<br>12、Max、min</p>
+<h3 id="第38天-Ajax企业级项目开发与地图第三天"><a href="#第38天-Ajax企业级项目开发与地图第三天" class="headerlink" title="第38天 Ajax企业级项目开发与地图第三天"></a>第38天 Ajax企业级项目开发与地图第三天</h3><p>1、Template方法<br>2、模板修正<br>3、卷动到底部加载更多<br>4、动态绑定<br>5、域<br>6、跨域<br>7、jsonp<br>8、ajax分页<br>9、封装轮子<br>10、jQuery中的jsonp<br>11、瀑布流<br>12、百度地图</p>
+<h3 id="第39天-后台管理-项目实战第五天undefined"><a href="#第39天-后台管理-项目实战第五天undefined" class="headerlink" title="第39天 后台管理 项目实战第五天undefined"></a>第39天 后台管理 项目实战第五天undefined</h3><p>1、选课系统</p>
+<h3 id="第40天-css3-3D效果"><a href="#第40天-css3-3D效果" class="headerlink" title="第40天 css3 3D效果"></a>第40天 css3 3D效果</h3><p>1、3D变形<br>2、perspective<br>3、3d旋转<br>4、旋转轴<br>5、空间移动<br>6、各种3d效果<br>7、3d轮播图</p>
+<h3 id="第41天-移动端响应式开发"><a href="#第41天-移动端响应式开发" class="headerlink" title="第41天 移动端响应式开发"></a>第41天 移动端响应式开发</h3><p>1、Touch事件<br>2、touchStart<br>3、touchMove<br>4、touchEnd<br>5、Touch事件的轮播图<br>6、惯性拖拽<br>7、体验Highchars<br>8、 标题<br>9、横坐标轴<br>10、纵坐标轴<br>11、提示框<br>12、数据点的细节<br>13、署名<br>14、图例<br>15、数据列</p>
+<h3 id="第42天-HTML5与大数据可视化"><a href="#第42天-HTML5与大数据可视化" class="headerlink" title="第42天 HTML5与大数据可视化"></a>第42天 HTML5与大数据可视化</h3><p>1、百度天气<br>2、导出图片<br>3、动态更新图表<br>4、本地存储<br>5、会话存储<br>6、webWorker<br>7、EventSource<br>8、驾考一点通<br>9、摄像头<br>10、离线资源<br>11、在线与离线<br>12、地理定位<br>13、History API</p>
+<h2 id="第二章-高级课程"><a href="#第二章-高级课程" class="headerlink" title="第二章 高级课程"></a>第二章 高级课程</h2><h3 id="第1天-html5开发实战与webGL"><a href="#第1天-html5开发实战与webGL" class="headerlink" title="第1天 html5开发实战与webGL"></a>第1天 html5开发实战与webGL</h3><p>1、Canvas详细介绍<br>2、Canvas API<br>3、getContext<br>4、rect<br>5、Arc<br>6、lineTo<br>7、moveTo<br>8、drawImage<br>9、getImageData<br>10、putImageData<br>11、等方法<br>12、webGL</p>
+<h3 id="第2天-HTML5游戏项目实战-flappy-bird"><a href="#第2天-HTML5游戏项目实战-flappy-bird" class="headerlink" title="第2天 HTML5游戏项目实战 flappy bird"></a>第2天 HTML5游戏项目实战 flappy bird</h3><p>1、Flappybird游戏<br>2、游戏分析<br>3、游戏类<br>4、游戏类的属性与作用<br>5、中介者模式<br>6、背景类<br>7、背景类的属性与作用<br>8、背景类的无缝连接<br>9、鸟类<br>10、鸟类的属性与作用<br>11、鸟类的旋转与上升下落</p>
+<h3 id="第3天-HTML5游戏项目实战-打地鼠"><a href="#第3天-HTML5游戏项目实战-打地鼠" class="headerlink" title="第3天 HTML5游戏项目实战 打地鼠"></a>第3天 HTML5游戏项目实战 打地鼠</h3><p>1、打地鼠游戏<br>2、游戏分析<br>3、Game类<br>4、中介者模式<br>5、背景类<br>6、背景的洞属性<br>7、洞的位置属性<br>8、地鼠类<br>9、地鼠的生命周期<br>10、地鼠的渲染<br>11、地鼠的样式切换<br>12、地鼠的死亡<br>13、其它类<br>14、锤子、<br>15、星星、<br>16、计分、<br>17、生命次数</p>
+<h3 id="第4天-node-js企业级应用开发"><a href="#第4天-node-js企业级应用开发" class="headerlink" title="第4天 node.js企业级应用开发"></a>第4天 node.js企业级应用开发</h3><p>1、Nodejs简介<br>2、Nodejs的诞生<br>3、Nodejs的安装<br>4、Nodejs的特点<br>5、单线程、<br>6、非阻塞I/O、<br>7、事件驱动<br>8、Nodejs的适用场景<br>9、高并发、IO密集型</p>
+<h3 id="第5天-node-js企业级应用开发"><a href="#第5天-node-js企业级应用开发" class="headerlink" title="第5天 node.js企业级应用开发"></a>第5天 node.js企业级应用开发</h3><p>1、模块<br>2、内置模块与自定义模块<br>3、http模块<br>4、Url模块<br>5、Path模块<br>6、Fs模块<br>7、处理get请求<br>8、处理post请求<br>9、Npm命令<br>10、Formidable文件上传</p>
+<h3 id="第6天-node-js企业级应用开发"><a href="#第6天-node-js企业级应用开发" class="headerlink" title="第6天 node.js企业级应用开发"></a>第6天 node.js企业级应用开发</h3><p>1、Express<br>2、简介<br>3、路由<br>4、Verbs路由<br>5、Router路由<br>6、Express中间件<br>7、Express静态化文件<br>8、Body-parser<br>9、Ejs模板引擎<br>10、使用<br>11、与express配合使用<br>12、非关系型数据库mongodb<br>13、Cookie<br>14、在express中使用cookie<br>15、Cookie-parser<br>16、在express中使用session<br>17、Express-session</p>
+<h3 id="第7天-node-js企业级应用开发"><a href="#第7天-node-js企业级应用开发" class="headerlink" title="第7天 node.js企业级应用开发"></a>第7天 node.js企业级应用开发</h3><p>1、相册项目分析<br>2、使用的模块、和事先安装的程序<br>3、主页/路由<br>4、登陆、注册页面/路由<br>5、修改密码<br>6、权限管理<br>7、管理员账户<br>8、普通账户<br>9、会员账户<br>10、管理相册功能<br>11、相册的创建<br>12、图片的上传</p>
+<h3 id="第8天-node-js项目实战-相册"><a href="#第8天-node-js项目实战-相册" class="headerlink" title="第8天 node.js项目实战 相册"></a>第8天 node.js项目实战 相册</h3><p>1、相册项目<br>2、管理相册功能<br>3、相册的删除<br>4、图片的删除<br>5、图片是否共享<br>6、查看相册功能<br>7、只能查看自己的相册<br>8、所有相册功能<br>9、查看所有人的相册<br>10、管理员用户可以查看所有人的相册<br>11、会员用户可以查看所有人的相册<br>12、普通用户可以查看其它人共享的相册、<br>13、头像裁剪功能<br>14、Graphics Magic介绍<br>15、Graphics Magic使用<br>16、在node中使用GM<br>17、头像裁剪</p>
+<h3 id="第9天-node-js项目实战聊天室"><a href="#第9天-node-js项目实战聊天室" class="headerlink" title="第9天 node.js项目实战聊天室"></a>第9天 node.js项目实战聊天室</h3><p>1、Ajax长轮询<br>2、长轮询的实现<br>3、长轮询的缺点<br>4、Socketio<br>5、介绍<br>6、使用<br>7、建立前后端的socket通道<br>8、前端发起信息<br>9、后端接收消息并广播<br>10、聊天室<br>11、布局<br>12、分析<br>13、登陆<br>14、发送信息并显示<br>15、单独对某一个人聊天<br>16、管理员踢人和禁言</p>
+<h3 id="第10天-设计模式"><a href="#第10天-设计模式" class="headerlink" title="第10天 设计模式"></a>第10天 设计模式</h3><p>1、设计模式的概念<br>2、简单工厂模式<br>3、寄生工厂模式<br>4、创建小球<br>5、工厂方法模式<br>6、安全类<br>7、闭包类<br>8、单例模式<br>9、静态变量<br>10、原型<br>11、原型模式</p>
+<h3 id="第11天-设计模式"><a href="#第11天-设计模式" class="headerlink" title="第11天 设计模式"></a>第11天 设计模式</h3><p>1、适配器模式<br>2、组合模式<br>3、组合模式创建页面<br>4、策略模式<br>5、策略模式验证表单<br>6、策略模式淘宝价格<br>7、jQuery的easing动画策略<br>8、自定义策略<br>9、观察者模式<br>10、微博案例-三个模块之间的互相通信</p>
+<h3 id="第12天-设计模式"><a href="#第12天-设计模式" class="headerlink" title="第12天 设计模式"></a>第12天 设计模式</h3><p>1、模板<br>2、格式模板的函数<br>3、命令模式<br>4、使用命令模式组件视图<br>5、canvas绘图的命令模式<br>6、迭代器模式<br>7、jQuery中的迭代器模式<br>8、对象、数组迭代器<br>9、迭代构造函数的实例<br>10、图片综合案例操作</p>
+<h3 id="第13天-设计模式"><a href="#第13天-设计模式" class="headerlink" title="第13天 设计模式"></a>第13天 设计模式</h3><p>1、委托模式<br>2、委托模式-减少事件数量<br>3、委托模式-减少内存泄漏<br>4、委托模式-语言未来元素<br>5、请求委托<br>6、请求委托-案例<br>7、节流模式<br>8、封装节流函数<br>9、节流案例-浮层<br>10、节流案例-统计</p>
+<h3 id="第14天-设计模式项目实战"><a href="#第14天-设计模式项目实战" class="headerlink" title="第14天 设计模式项目实战"></a>第14天 设计模式项目实战</h3><p>1、MVC简介<br>2、M的封装<br>3、V的封装<br>4、C的封装<br>5、综合到一起<br>6、建站案例<br>7、MVVM的介绍<br>8、M<br>9、V<br>10、VM<br>11、使用mvvm创建进度条</p>
+<h3 id="第15天-模块化开发-seajs"><a href="#第15天-模块化开发-seajs" class="headerlink" title="第15天 模块化开发 - seajs"></a>第15天 模块化开发 - seajs</h3><p>1、 工作中常见问题<br>2、 试用seajs<br>3、 定义模块<br>4、 Require模块<br>5、 使用具有id的模块<br>下午<br>6、 暴露接口10种方法<br>7、 模块对象<br>8、 异步加载模块<br>9、 同步加载与异步加载<br>10、 配置<br>11、 预加载插件<br>12、 加载css文件<br>13、 MVC模块化</p>
+<h3 id="第16天-模块化开发-requirejs"><a href="#第16天-模块化开发-requirejs" class="headerlink" title="第16天 模块化开发 - requirejs"></a>第16天 模块化开发 - requirejs</h3><p>1、体验requirejs<br>2、定义模块<br>3、模块对象<br>4、使用具有id的模块<br>5、模块覆盖<br>下午<br>6、接口暴露<br>7、配置<br>8、Css插件<br>9、MVC模块化<br>10、体验Backbone<br>11、模型实例化<br>12、模型默认属性<br>13、模型构造函数<br>14、模型转换对象<br>15、模型获取数据<br>16、设置模型数据</p>
+<h3 id="第17天-Backbone"><a href="#第17天-Backbone" class="headerlink" title="第17天 Backbone"></a>第17天 Backbone</h3><p>1、模型事件<br>2、是否修改过模型<br>3、模型删除属性<br>4、视图实例化<br>5、设置容器元素<br>6、修改容器元素<br>7、构造函数<br>下午<br>8、模板方法<br>9、渲染方法<br>10、Taobao商品<br>11、渲染产品<br>12、Underscore节流器<br>13、集合<br>14、集合转化数组<br>15、添加模型<br>16、集合获取模型<br>17、集合删除模型<br>18、集合构造函数<br>19、集合事件<br>20、淘宝商品列表</p>
+<h3 id="第18天-Backbone"><a href="#第18天-Backbone" class="headerlink" title="第18天 Backbone"></a>第18天 Backbone</h3><p>1、forEach方法<br>2、Map方法<br>3、sortBy方法<br>4、groupBy方法<br>6、淘宝商品排序<br>7、过滤方法<br>8、淘宝商品<br>下午<br>9、事件对象<br>10、事件命名空间<br>11、事件注销<br>12、单次注册事件<br>13、跨对象事件监听<br>14、模型与视图通信<br>15、淘宝商品<br>16、跨对象事件注销<br>17、路由模块<br>18、动态路由<br>19、异步拉去数据<br>20、淘宝案例</p>
+<h3 id="第19天-Backbone-项目实战"><a href="#第19天-Backbone-项目实战" class="headerlink" title="第19天 Backbone 项目实战"></a>第19天 Backbone 项目实战</h3><p>1、搭建项目<br>2、定义路由<br>3、列表样式<br>4、图片模型<br>5、图片集合<br>下午<br>6、列表页视图<br>7、列表页搜索<br>8、加载更多<br>9、列表页分类<br>10、返回顶部<br>11、大图页视图<br>12、大图页交互<br>13、模块化</p>
+<h3 id="第20天-Vue-2-0undefined"><a href="#第20天-Vue-2-0undefined" class="headerlink" title="第20天 Vue 2.0undefined"></a>第20天 Vue 2.0undefined</h3><p>1、体验vue<br>2、选择器<br>3、数据绑定<br>4、属性插值<br>5、单次插值<br>6、过滤html<br>7、插值表达式<br>8、插值过滤器<br>下午<br>9、数据动态绑定<br>10、数据双向绑定<br>11、类的三种绑定方式<br>12、新浪案例<br>13、样式的三种绑定方式<br>14、淘宝案例<br>15、Underscore条件语句<br>16、V-if指令<br>17、Template模板v-if<br>18、Underscore循环指令<br>19、V-for指令<br>20、Template循环指令<br>21、支付宝注册</p>
+<h3 id="第21天-Vue-2-0"><a href="#第21天-Vue-2-0" class="headerlink" title="第21天 Vue 2.0"></a>第21天 Vue 2.0</h3><p>1、多选框<br>2、单选框<br>3、下拉框<br>4、Hao123下拉框<br>5、过滤器<br>6、淘宝注册<br>7、表单特性属性<br>8、自定义指令<br>9、京东注册<br>10、自定义过滤器<br>11、京东商品价格<br>12、事件<br>13、键盘事件修饰符<br>14、登录页面<br>15、过渡</p>
+<h3 id="第22天-Vue-2-0-项目实战"><a href="#第22天-Vue-2-0-项目实战" class="headerlink" title="第22天 Vue 2.0 项目实战"></a>第22天 Vue 2.0 项目实战</h3><p>1、组件<br>2、子组件向父组件通信<br>3、创建页面组件<br>4、搭建路由<br>5、Header与工具方法<br>下午<br>6、分类按钮<br>7、广告视图<br>8、商品列表<br>9、列表页<br>10、列表页交互<br>11、详情页<br>12、模块化</p>
+<h3 id="第23天-Angular"><a href="#第23天-Angular" class="headerlink" title="第23天 Angular"></a>第23天 Angular</h3><p>1、angular简介<br>2、Vue双向绑定<br>3、Angular双向绑定<br>4、初始化数据<br>5、获取应用该程序<br>6、作用域<br>下午<br>7、事件<br>8、显隐页面<br>9、插值表达式<br>10、过滤器<br>11、日期过滤器<br>12、日期过滤器实现<br>13、Filter过滤器<br>14、字符串过滤器<br>15、排序过滤器<br>16、数字过滤器<br>17、自定义过滤器</p>
+<h3 id="第24天-Angular"><a href="#第24天-Angular" class="headerlink" title="第24天 Angular"></a>第24天 Angular</h3><p>1、脏值检测<br>2、注册页面<br>3、Ng-readyonly<br>4、Ng-disabled<br>5、Ng-checked<br>6、Ng-change<br>7、Ng-submit<br>下午<br>8、根作用域<br>9、作用域<br>10、Ng-href<br>11、Ng-src<br>12、绑定类<br>13、绑定样式<br>14、If模板指令<br>15、多分支模板指令<br>16、循环模板指令<br>17、Ng-include</p>
+<h3 id="第25天-Angular"><a href="#第25天-Angular" class="headerlink" title="第25天 Angular"></a>第25天 Angular</h3><p>1、自定义指令<br>2、指令作用域<br>3、自定义指令内容作用域<br>4、自定义指令模板作用域<br>5、@修饰符<br>6、=修饰符<br>下午<br>7、Link方法<br>8、Ng-show指令<br>9、Ng-bind指令<br>10、Ng-class指令<br>11、Transclude属性<br>12、自定义指令嵌套<br>13、表单验证指令<br>14、作用域丢失<br>15、倒计时</p>
+<h3 id="第26天-Angular"><a href="#第26天-Angular" class="headerlink" title="第26天 Angular"></a>第26天 Angular</h3><p>1、$http服务<br>2、Get请求<br>3、Post请求<br>4、Factory自定义服务<br>5、Service自定义服务<br>6、自定义观察者模式服务<br>下午<br>7、指令路由<br>8、路由控制器<br>9、路由重定向<br>10、路由事件<br>11、Location服务<br>12、Ui路由<br>13、路由参数<br>14、多视图渲染<br>15、重定向以及默认路由<br>16、子路由<br>17、Ui路由事件</p>
+<h3 id="第27天-Angular-项目实战"><a href="#第27天-Angular-项目实战" class="headerlink" title="第27天 Angular 项目实战"></a>第27天 Angular 项目实战</h3><p>1、环境配置<br>2、登录检测<br>3、登录模块<br>4、首页模块<br>5、导航模块<br>6、创建用户<br>7、用户列表<br>8、用户详情</p>
+<h3 id="第28天-微信开发"><a href="#第28天-微信开发" class="headerlink" title="第28天 微信开发"></a>第28天 微信开发</h3><p>1、注册微信小程序<br>2、全局配置<br>3、App应用程序<br>4、Page页面<br>5、模块化开发<br>下午<br>6、理由<br>7、If指令与for指令<br>8、模板<br>9、事件<br>10、引入文件<br>11、项目实战–明信片</p>
+<h3 id="第29天-前端工程化-Gulp"><a href="#第29天-前端工程化-Gulp" class="headerlink" title="第29天 前端工程化 - Gulp"></a>第29天 前端工程化 - Gulp</h3><p>1、体验gulp<br>2、Task任务<br>3、读写文件<br>4、监听文件<br>5、Globs语法<br>6、重命名<br>7、压缩js<br>8、压缩css<br>9、压缩html<br>10、Vue项目实战<br>11、文件打包<br>12、语法检测<br>13、图片压缩</p>
+<h3 id="第30天-前端工程化-Webpack"><a href="#第30天-前端工程化-Webpack" class="headerlink" title="第30天 前端工程化 - Webpack"></a>第30天 前端工程化 - Webpack</h3><p>1、Webpack<br>2、Webpack-dev-server<br>3、图片加载机<br>4、压缩js插件<br>下午<br>5、创建html<br>6、自动打开浏览器<br>7、环境变量<br>8、代码拆分<br>9、代码块<br>10、全局变量<br>11、Hot module<br>12、React 编译</p>
+<h3 id="第31天-前端工程化-Fis3"><a href="#第31天-前端工程化-Fis3" class="headerlink" title="第31天 前端工程化 - Fis3"></a>第31天 前端工程化 - Fis3</h3><p>1、体验fis<br>2、Fis配置<br>3、项目实战<br>4、压缩js<br>5、压缩css<br>6、压缩图片<br>下午<br>7、精灵图制作<br>8、添加指纹<br>9、合并css资源<br>10、合同并html资源<br>11、合并js资源<br>12、文件打包<br>13、Cmd规范<br>14、Amd规范<br>15、Commonjs规范<br>16、Vue项目实战</p>
+<h3 id="第32天-CSS预编译-Less"><a href="#第32天-CSS预编译-Less" class="headerlink" title="第32天 CSS预编译 - Less"></a>第32天 CSS预编译 - Less</h3><p>1、浏览器端使用less<br>2、Node环境中使用less<br>3、工程化中使用less<br>4、变量<br>5、混合<br>6、方法<br>下午<br>7、条件语句<br>8、数学方法<br>9、色彩创建<br>10、色彩通道<br>11、色彩操作<br>12、色彩混合<br>13、字符串方法<br>14、作用域<br>15、导入文件<br>16、Js语句<br>17、插值语法<br>18、MVC项目实战</p>
+<h3 id="第33天-CSS预编译-Sass"><a href="#第33天-CSS预编译-Sass" class="headerlink" title="第33天 CSS预编译 - Sass"></a>第33天 CSS预编译 - Sass</h3><p>1、体验sass<br>2、工程化编译sass<br>3、变量<br>4、属性嵌套<br>5、混合<br>6、混合传参<br>7、获取剩余参数<br>下午<br>8、继承<br>9、作用域<br>10、数学运算<br>11、色彩运算<br>12、字符串运算<br>13、插值语法<br>14、If条件语句<br>15、For循环语句<br>16、栅格化系统<br>17、While循环<br>18、枚举循环<br>19、三元语句</p>
+<h3 id="第34天-CSS预编译-Stylus"><a href="#第34天-CSS预编译-Stylus" class="headerlink" title="第34天 CSS预编译 - Stylus"></a>第34天 CSS预编译 - Stylus</h3><p>1、体验stylus<br>2、变量<br>3、混合<br>4、获取剩余参数<br>下午<br>5、方法<br>6、继承<br>7、作用域<br>8、内置方法<br>9、插值<br>10、条件语句<br>11、枚举循环<br>12、文件导入<br>13、避免编译<br>14、动画</p>
+<h3 id="第35天-ECMAScript-5undefined"><a href="#第35天-ECMAScript-5undefined" class="headerlink" title="第35天 ECMAScript 5undefined"></a>第35天 ECMAScript 5undefined</h3><p>1、JSON.parse<br>2、JSON.stringify<br>3、判断数组<br>4、获取数组成员<br>5、数组填充<br>6、数组遍历<br>7、数组映射<br>下午<br>8、Some<br>9、Every<br>10、Filter<br>11、Reduce<br>12、求任意两个正整数之间整数之和<br>13、严格模式-定义变量<br>14、严格模式-作用域<br>15、严格模式-函数参数<br>16、严格模式-对象属性<br>17、严格模式-delete关键字<br>18、严格模式-关键字、保留字、特殊变量<br>19、严格模式-八进制与特殊字符<br>20、严格模式-eval方法<br>21、严格模式-anguments.callee<br>22、严格模式-with<br>23、Data拓展<br>24、Bind方法<br>25、Create方法<br>26、属性特性<br>27、特性方法<br>28、定义多个属性特性<br>29、获取对象特性<br>30、对象封闭<br>31、对象冻结<br>32、对象原型</p>
+<h3 id="第36天-React"><a href="#第36天-React" class="headerlink" title="第36天 React"></a>第36天 React</h3><p>1、react简介<br>2、创建组件<br>3、Jsx语法<br>4、工程化编译jsx语法<br>下午<br>5、插值<br>6、新闻列表<br>7、属性<br>8、样式<br>9、事件<br>10、状态<br>11、换肤</p>
+<h3 id="第37天-React"><a href="#第37天-React" class="headerlink" title="第37天 React"></a>第37天 React</h3><p>1、组件创建期<br>2、子组件<br>3、组件存在期<br>4、组件销毁期<br>下午<br>5、非元素属性<br>6、非约束性组件<br>7、约束性组件<br>8、下拉框约束性与非约束性<br>9、单选框约束性与非约束性<br>10、使用非react类库<br>11、使用侵入式插件</p>
+<h3 id="第38天-React-项目实战"><a href="#第38天-React-项目实战" class="headerlink" title="第38天 React 项目实战"></a>第38天 React 项目实战</h3><p>1、子组件向父组件通信<br>2、兄弟组件通信<br>3、项目部署<br>4、导航组件<br>下午<br>5、Banner组件<br>6、首页组件<br>7、起步页组件<br>8、起步页样式<br>9、Css组件<br>10、抽象组件<br>11、模块化</p>
+<h3 id="第39天-React-项目实战"><a href="#第39天-React-项目实战" class="headerlink" title="第39天 React 项目实战"></a>第39天 React 项目实战</h3><p>1、项目部署<br>2、加载动画<br>3、图片加载器<br>4、请求数据<br>下午<br>5、配置路由<br>6、Banner组件<br>7、首页组件<br>8、分类组件reflux实现<br>9、Search组件reflux实现<br>10、模块化</p>
+<h3 id="第40天-Typescript"><a href="#第40天-Typescript" class="headerlink" title="第40天 Typescript"></a>第40天 Typescript</h3><p>1、Typescript<br>2、工程化编译<br>3、枚举类型<br>4、函数<br>5、类<br>6、继承<br>下午<br>7、对象接口<br>8、函数接口<br>9、类接口<br>10、模块<br>11、浏览器端编译ES6<br>12、服务器器端编译ES6<br>13、Let关键字<br>14、常量<br>15、字符串位置<br>16、多行字符串<br>17、重复字符串<br>18、原始字符串</p>
+<h3 id="第41天-ECMAScript-6"><a href="#第41天-ECMAScript-6" class="headerlink" title="第41天 ECMAScript 6"></a>第41天 ECMAScript 6</h3><p>1、数字对象拓展<br>2、数学对象拓展<br>3、Form方法<br>4、Of方法<br>5、获取数组成员<br>6、数组拷贝<br>7、对象字面量<br>8、Is判断方法<br>下午<br>9、数组迭代器方法<br>10、Assign方法<br>11、Symbol模型<br>12、代理<br>13、默认参数<br>14、获取剩余参数<br>15、对象解构<br>16、数组解构<br>17箭头函数<br>18、箭头函数作用域<br>19、Set对象<br>20、Weakset对象<br>21、Map对象<br>22、Weakmap对象<br>23、迭代器<br>24、Generator函数<br>25、允诺对象</p>
+<h3 id="第42天-ECMAScript-6-项目实战"><a href="#第42天-ECMAScript-6-项目实战" class="headerlink" title="第42天 ECMAScript 6 项目实战"></a>第42天 ECMAScript 6 项目实战</h3><p>1、环境搭建<br>2、三个模块<br>3、Until模块<br>4、创建列表页<br>下午<br>5、进入详情页<br>6、创建详情页<br>7、进入评论页<br>8、创建评论页<br>9、追加评论<br>10、返回逻辑</p>
+<h3 id="第43天-ReactNative与GIt版本管理工具"><a href="#第43天-ReactNative与GIt版本管理工具" class="headerlink" title="第43天 ReactNative与GIt版本管理工具"></a>第43天 ReactNative与GIt版本管理工具</h3><p>1、安装reactNative环境<br>2、体验ReactNative<br>3、内置组件<br>4、样式模块<br>5、Flexbox<br>6、表单<br>7、滚动视图<br>8、列表<br>9、网络请求<br>10、安装git<br>11、常用指令<br>12、资源状态<br>13、建立信任关系<br>14、创建版本库<br>15、更新版本库</p>
+<h3 id="第44天-Vuex"><a href="#第44天-Vuex" class="headerlink" title="第44天 Vuex"></a>第44天 Vuex</h3><p>1、ES6语法创建应用<br>2、创建Store<br>3、State树<br>4、动态状态<br>5、Mutations<br>下午<br>6、Action<br>7、Modules切割模块<br>8、动态路由配置<br>9、路由嵌套<br>10、管理路由<br>11、命名路由<br>12、命名视图<br>13、路由重定向<br>14、Resource请求数据</p>
+<h3 id="第45天-基于ES6语法VueX项目实战"><a href="#第45天-基于ES6语法VueX项目实战" class="headerlink" title="第45天 基于ES6语法VueX项目实战"></a>第45天 基于ES6语法VueX项目实战</h3><p>1、创建应用程序<br>2、创建路由<br>3、创建store<br>4、工具方法<br>5、创建组件<br>6、定义模块<br>7、组件通信<br>8、组件交互</p>
+<h3 id="第46天-Angular-4-0"><a href="#第46天-Angular-4-0" class="headerlink" title="第46天 Angular 4.0"></a>第46天 Angular 4.0</h3><p>1、体验angular<br>2、创建组件<br>3、样式<br>4、插值<br>5、子组件<br>下午<br>6、组件通信<br>7、事件<br>8、局部模板变量<br>9、Ng-if指令<br>10、Ng-switch指令<br>11、Ng-for指令<br>12、自定义管道<br>13、Form表单以及脏值检测<br>14、自定义指令<br>15、自定义服务<br>16、RxJS与Promise<br>17、路由模块<br>18、组件继承</p>
+<p>##第三章 项目实战</p>
+<h3 id="第1天-项目实战"><a href="#第1天-项目实战" class="headerlink" title="第1天 项目实战"></a>第1天 项目实战</h3><h3 id="第2天-项目实战"><a href="#第2天-项目实战" class="headerlink" title="第2天 项目实战"></a>第2天 项目实战</h3><h3 id="第3天-项目实战"><a href="#第3天-项目实战" class="headerlink" title="第3天 项目实战"></a>第3天 项目实战</h3><h3 id="第4天-项目实战"><a href="#第4天-项目实战" class="headerlink" title="第4天 项目实战"></a>第4天 项目实战</h3><h3 id="第5天-项目实战"><a href="#第5天-项目实战" class="headerlink" title="第5天 项目实战"></a>第5天 项目实战</h3><h3 id="第6天-项目实战"><a href="#第6天-项目实战" class="headerlink" title="第6天 项目实战"></a>第6天 项目实战</h3><h3 id="第7天-项目实战"><a href="#第7天-项目实战" class="headerlink" title="第7天 项目实战"></a>第7天 项目实战</h3><h3 id="第8天-项目实战"><a href="#第8天-项目实战" class="headerlink" title="第8天 项目实战"></a>第8天 项目实战</h3><h3 id="第9天-项目实战-1"><a href="#第9天-项目实战-1" class="headerlink" title="第9天 项目实战"></a>第9天 项目实战</h3><h3 id="第10天-项目实战"><a href="#第10天-项目实战" class="headerlink" title="第10天 项目实战"></a>第10天 项目实战</h3><h3 id="第11天-项目分享"><a href="#第11天-项目分享" class="headerlink" title="第11天 项目分享"></a>第11天 项目分享</h3>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/个人感悟/" rel="tag"># 个人感悟</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/26/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2999/06/28/今生，一场不断向上的修行/" rel="prev" title="今生一场不断向上的修行">
+                今生一场不断向上的修行 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://life.zhangxingqiu.cn/images/avatar.jpg"
+               alt="夏小北" />
+          <p class="site-author-name" itemprop="name">夏小北</p>
+           
+              <p class="site-description motion-element" itemprop="description">岁月像一场有去无回的旅行，好的坏的都是风景。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives">
+            
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/fdy696" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzUzMDA2MTI1OQ==&scene=124#wechat_redirect" target="_blank" title="weChat">
+                  
+                    <i class="fa fa-fw fa-weixin"></i>
+                  
+                    
+                      weChat
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              推荐访问
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://yixi.tv/records" title="yixi.tv" target="_blank">yixi.tv</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://hao.uisdc.com/" title="hao.uisdc" target="_blank">hao.uisdc</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.zybuluo.com/mdeditor#805352" title="Markdown Online" target="_blank">Markdown Online</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com/" title="Next Doc" target="_blank">Next Doc</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前端学习手册"><span class="nav-number">1.</span> <span class="nav-text">前端学习手册</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章初级课程"><span class="nav-number">1.1.</span> <span class="nav-text">第一章初级课程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一天-html"><span class="nav-number">1.1.1.</span> <span class="nav-text">第一天 html</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP协议"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">HTTP协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#html是纯文本"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">html是纯文本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#html骨架"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">html骨架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DTD文档类型"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">DTD文档类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#head标签"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">head标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#body标签"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">body标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#html基本语法"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">html基本语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#h系列的标签"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">h系列的标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#p标签"><span class="nav-number">1.1.1.9.</span> <span class="nav-text">p标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#img标签"><span class="nav-number">1.1.1.10.</span> <span class="nav-text">img标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#a标签"><span class="nav-number">1.1.1.11.</span> <span class="nav-text">a标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#div和span含义"><span class="nav-number">1.1.1.12.</span> <span class="nav-text">div和span含义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二天-html"><span class="nav-number">1.1.2.</span> <span class="nav-text">第二天 html</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无序列表"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有序列表"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定义列表"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">定义列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表格基础"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">表格基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并单元格"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">合并单元格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三个划分区域的语义标签"><span class="nav-number">1.1.2.6.</span> <span class="nav-text">三个划分区域的语义标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#form标签"><span class="nav-number">1.1.2.7.</span> <span class="nav-text">form标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#input标签"><span class="nav-number">1.1.2.8.</span> <span class="nav-text">input标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单行文本框"><span class="nav-number">1.1.2.9.</span> <span class="nav-text">单行文本框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#密码框"><span class="nav-number">1.1.2.10.</span> <span class="nav-text">密码框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单选框"><span class="nav-number">1.1.2.11.</span> <span class="nav-text">单选框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多选框"><span class="nav-number">1.1.2.12.</span> <span class="nav-text">多选框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文本域"><span class="nav-number">1.1.2.13.</span> <span class="nav-text">文本域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下拉菜单"><span class="nav-number">1.1.2.14.</span> <span class="nav-text">下拉菜单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按钮"><span class="nav-number">1.1.2.15.</span> <span class="nav-text">按钮</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第3天-css"><span class="nav-number">1.1.3.</span> <span class="nav-text">第3天 css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第4天-css"><span class="nav-number">1.1.4.</span> <span class="nav-text">第4天 css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第5天-css"><span class="nav-number">1.1.5.</span> <span class="nav-text">第5天 css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第6天-css"><span class="nav-number">1.1.6.</span> <span class="nav-text">第6天 css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第7天-css"><span class="nav-number">1.1.7.</span> <span class="nav-text">第7天 css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第8天-css"><span class="nav-number">1.1.8.</span> <span class="nav-text">第8天 css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第9天-项目实战"><span class="nav-number">1.1.9.</span> <span class="nav-text">第9天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第10天-html5"><span class="nav-number">1.1.10.</span> <span class="nav-text">第10天 html5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第11天-css3"><span class="nav-number">1.1.11.</span> <span class="nav-text">第11天 css3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第12天-css3"><span class="nav-number">1.1.12.</span> <span class="nav-text">第12天 css3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第13天-BootStrap"><span class="nav-number">1.1.13.</span> <span class="nav-text">第13天 BootStrap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第14天-项目实战"><span class="nav-number">1.1.14.</span> <span class="nav-text">第14天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第15天-项目实战"><span class="nav-number">1.1.15.</span> <span class="nav-text">第15天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第16天-js基础"><span class="nav-number">1.1.16.</span> <span class="nav-text">第16天 js基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第17天-js基础"><span class="nav-number">1.1.17.</span> <span class="nav-text">第17天 js基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第18天-js基础"><span class="nav-number">1.1.18.</span> <span class="nav-text">第18天 js基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第19天-js基础"><span class="nav-number">1.1.19.</span> <span class="nav-text">第19天 js基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第20天-js基础"><span class="nav-number">1.1.20.</span> <span class="nav-text">第20天 js基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第21天-js基础"><span class="nav-number">1.1.21.</span> <span class="nav-text">第21天 js基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第22天-js基础"><span class="nav-number">1.1.22.</span> <span class="nav-text">第22天 js基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第23天"><span class="nav-number">1.1.23.</span> <span class="nav-text">第23天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第24天-jQuery第一天"><span class="nav-number">1.1.24.</span> <span class="nav-text">第24天 jQuery第一天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第25天-jQuery第二天"><span class="nav-number">1.1.25.</span> <span class="nav-text">第25天 jQuery第二天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第26天-jQuery第三天"><span class="nav-number">1.1.26.</span> <span class="nav-text">第26天 jQuery第三天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第27天-jQuery第四天"><span class="nav-number">1.1.27.</span> <span class="nav-text">第27天 jQuery第四天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第28天-jQuery第五天"><span class="nav-number">1.1.28.</span> <span class="nav-text">第28天 jQuery第五天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第29天-JavaScript进阶第一天"><span class="nav-number">1.1.29.</span> <span class="nav-text">第29天 JavaScript进阶第一天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第30天-JavaScript进阶第二天"><span class="nav-number">1.1.30.</span> <span class="nav-text">第30天 JavaScript进阶第二天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第31天-JavaScript进阶第三天"><span class="nav-number">1.1.31.</span> <span class="nav-text">第31天 JavaScript进阶第三天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第32天-JavaScript进阶第四天"><span class="nav-number">1.1.32.</span> <span class="nav-text">第32天 JavaScript进阶第四天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第33天-JavaScript进阶第六天"><span class="nav-number">1.1.33.</span> <span class="nav-text">第33天 JavaScript进阶第六天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第34天-JavaScript进阶第七天"><span class="nav-number">1.1.34.</span> <span class="nav-text">第34天 JavaScript进阶第七天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第35天-PHP入门第一天"><span class="nav-number">1.1.35.</span> <span class="nav-text">第35天 PHP入门第一天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第36天-Ajax企业级项目开发第一天"><span class="nav-number">1.1.36.</span> <span class="nav-text">第36天 Ajax企业级项目开发第一天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第37天-Ajax企业级项目开发第二天undefined"><span class="nav-number">1.1.37.</span> <span class="nav-text">第37天 Ajax企业级项目开发第二天undefined</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第38天-Ajax企业级项目开发与地图第三天"><span class="nav-number">1.1.38.</span> <span class="nav-text">第38天 Ajax企业级项目开发与地图第三天</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第39天-后台管理-项目实战第五天undefined"><span class="nav-number">1.1.39.</span> <span class="nav-text">第39天 后台管理 项目实战第五天undefined</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第40天-css3-3D效果"><span class="nav-number">1.1.40.</span> <span class="nav-text">第40天 css3 3D效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第41天-移动端响应式开发"><span class="nav-number">1.1.41.</span> <span class="nav-text">第41天 移动端响应式开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第42天-HTML5与大数据可视化"><span class="nav-number">1.1.42.</span> <span class="nav-text">第42天 HTML5与大数据可视化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-高级课程"><span class="nav-number">1.2.</span> <span class="nav-text">第二章 高级课程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第1天-html5开发实战与webGL"><span class="nav-number">1.2.1.</span> <span class="nav-text">第1天 html5开发实战与webGL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第2天-HTML5游戏项目实战-flappy-bird"><span class="nav-number">1.2.2.</span> <span class="nav-text">第2天 HTML5游戏项目实战 flappy bird</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第3天-HTML5游戏项目实战-打地鼠"><span class="nav-number">1.2.3.</span> <span class="nav-text">第3天 HTML5游戏项目实战 打地鼠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第4天-node-js企业级应用开发"><span class="nav-number">1.2.4.</span> <span class="nav-text">第4天 node.js企业级应用开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第5天-node-js企业级应用开发"><span class="nav-number">1.2.5.</span> <span class="nav-text">第5天 node.js企业级应用开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第6天-node-js企业级应用开发"><span class="nav-number">1.2.6.</span> <span class="nav-text">第6天 node.js企业级应用开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第7天-node-js企业级应用开发"><span class="nav-number">1.2.7.</span> <span class="nav-text">第7天 node.js企业级应用开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第8天-node-js项目实战-相册"><span class="nav-number">1.2.8.</span> <span class="nav-text">第8天 node.js项目实战 相册</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第9天-node-js项目实战聊天室"><span class="nav-number">1.2.9.</span> <span class="nav-text">第9天 node.js项目实战聊天室</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第10天-设计模式"><span class="nav-number">1.2.10.</span> <span class="nav-text">第10天 设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第11天-设计模式"><span class="nav-number">1.2.11.</span> <span class="nav-text">第11天 设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第12天-设计模式"><span class="nav-number">1.2.12.</span> <span class="nav-text">第12天 设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第13天-设计模式"><span class="nav-number">1.2.13.</span> <span class="nav-text">第13天 设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第14天-设计模式项目实战"><span class="nav-number">1.2.14.</span> <span class="nav-text">第14天 设计模式项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第15天-模块化开发-seajs"><span class="nav-number">1.2.15.</span> <span class="nav-text">第15天 模块化开发 - seajs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第16天-模块化开发-requirejs"><span class="nav-number">1.2.16.</span> <span class="nav-text">第16天 模块化开发 - requirejs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第17天-Backbone"><span class="nav-number">1.2.17.</span> <span class="nav-text">第17天 Backbone</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第18天-Backbone"><span class="nav-number">1.2.18.</span> <span class="nav-text">第18天 Backbone</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第19天-Backbone-项目实战"><span class="nav-number">1.2.19.</span> <span class="nav-text">第19天 Backbone 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第20天-Vue-2-0undefined"><span class="nav-number">1.2.20.</span> <span class="nav-text">第20天 Vue 2.0undefined</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第21天-Vue-2-0"><span class="nav-number">1.2.21.</span> <span class="nav-text">第21天 Vue 2.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第22天-Vue-2-0-项目实战"><span class="nav-number">1.2.22.</span> <span class="nav-text">第22天 Vue 2.0 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第23天-Angular"><span class="nav-number">1.2.23.</span> <span class="nav-text">第23天 Angular</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第24天-Angular"><span class="nav-number">1.2.24.</span> <span class="nav-text">第24天 Angular</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第25天-Angular"><span class="nav-number">1.2.25.</span> <span class="nav-text">第25天 Angular</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第26天-Angular"><span class="nav-number">1.2.26.</span> <span class="nav-text">第26天 Angular</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第27天-Angular-项目实战"><span class="nav-number">1.2.27.</span> <span class="nav-text">第27天 Angular 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第28天-微信开发"><span class="nav-number">1.2.28.</span> <span class="nav-text">第28天 微信开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第29天-前端工程化-Gulp"><span class="nav-number">1.2.29.</span> <span class="nav-text">第29天 前端工程化 - Gulp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第30天-前端工程化-Webpack"><span class="nav-number">1.2.30.</span> <span class="nav-text">第30天 前端工程化 - Webpack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第31天-前端工程化-Fis3"><span class="nav-number">1.2.31.</span> <span class="nav-text">第31天 前端工程化 - Fis3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第32天-CSS预编译-Less"><span class="nav-number">1.2.32.</span> <span class="nav-text">第32天 CSS预编译 - Less</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第33天-CSS预编译-Sass"><span class="nav-number">1.2.33.</span> <span class="nav-text">第33天 CSS预编译 - Sass</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第34天-CSS预编译-Stylus"><span class="nav-number">1.2.34.</span> <span class="nav-text">第34天 CSS预编译 - Stylus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第35天-ECMAScript-5undefined"><span class="nav-number">1.2.35.</span> <span class="nav-text">第35天 ECMAScript 5undefined</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第36天-React"><span class="nav-number">1.2.36.</span> <span class="nav-text">第36天 React</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第37天-React"><span class="nav-number">1.2.37.</span> <span class="nav-text">第37天 React</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第38天-React-项目实战"><span class="nav-number">1.2.38.</span> <span class="nav-text">第38天 React 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第39天-React-项目实战"><span class="nav-number">1.2.39.</span> <span class="nav-text">第39天 React 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第40天-Typescript"><span class="nav-number">1.2.40.</span> <span class="nav-text">第40天 Typescript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第41天-ECMAScript-6"><span class="nav-number">1.2.41.</span> <span class="nav-text">第41天 ECMAScript 6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第42天-ECMAScript-6-项目实战"><span class="nav-number">1.2.42.</span> <span class="nav-text">第42天 ECMAScript 6 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第43天-ReactNative与GIt版本管理工具"><span class="nav-number">1.2.43.</span> <span class="nav-text">第43天 ReactNative与GIt版本管理工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第44天-Vuex"><span class="nav-number">1.2.44.</span> <span class="nav-text">第44天 Vuex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第45天-基于ES6语法VueX项目实战"><span class="nav-number">1.2.45.</span> <span class="nav-text">第45天 基于ES6语法VueX项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第46天-Angular-4-0"><span class="nav-number">1.2.46.</span> <span class="nav-text">第46天 Angular 4.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第1天-项目实战"><span class="nav-number">1.2.47.</span> <span class="nav-text">第1天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第2天-项目实战"><span class="nav-number">1.2.48.</span> <span class="nav-text">第2天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第3天-项目实战"><span class="nav-number">1.2.49.</span> <span class="nav-text">第3天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第4天-项目实战"><span class="nav-number">1.2.50.</span> <span class="nav-text">第4天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第5天-项目实战"><span class="nav-number">1.2.51.</span> <span class="nav-text">第5天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第6天-项目实战"><span class="nav-number">1.2.52.</span> <span class="nav-text">第6天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第7天-项目实战"><span class="nav-number">1.2.53.</span> <span class="nav-text">第7天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第8天-项目实战"><span class="nav-number">1.2.54.</span> <span class="nav-text">第8天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第9天-项目实战-1"><span class="nav-number">1.2.55.</span> <span class="nav-text">第9天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第10天-项目实战"><span class="nav-number">1.2.56.</span> <span class="nav-text">第10天 项目实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第11天-项目分享"><span class="nav-number">1.2.57.</span> <span class="nav-text">第11天 项目分享</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">夏小北</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.2"></script>
+
+
+  
+
+</body>
+</html>
