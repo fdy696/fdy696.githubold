@@ -95,16 +95,16 @@
 
 
 
-<meta name="description" content="岁月像一场有去无回的旅行，好的坏的都是风景。">
+<meta name="description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="读墨">
 <meta property="og:url" content="http://life.fengyong.com/index.html">
 <meta property="og:site_name" content="读墨">
-<meta property="og:description" content="岁月像一场有去无回的旅行，好的坏的都是风景。">
+<meta property="og:description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="读墨">
-<meta name="twitter:description" content="岁月像一场有去无回的旅行，好的坏的都是风景。">
+<meta name="twitter:description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
 
 
 
@@ -588,7 +588,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/06/求数组中最大，最小值的四种方法/">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/28/填坑系列--通过.和[]获取属性值的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="夏小北">
@@ -607,7 +607,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/10/06/求数组中最大，最小值的四种方法/" itemprop="url">求数组中最大,最小值的四种方法</a></h1>
+                <a class="post-title-link" href="/2017/10/28/填坑系列--通过.和[]获取属性值的区别/" itemprop="url">填坑系列--通过.和[]获取属性值的区别</a></h1>
         
 
         <div class="post-meta">
@@ -619,8 +619,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-06T18:06:24+08:00">
-                2017-10-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-28T12:06:24+08:00">
+                2017-10-28
               </time>
             
 
@@ -642,8 +642,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javaScript学习总结/" itemprop="url" rel="index">
-                    <span itemprop="name">javaScript学习总结</span>
+                  <a href="/categories/填坑系列/" itemprop="url" rel="index">
+                    <span itemprop="name">填坑系列</span>
                   </a>
                 </span>
 
@@ -680,23 +680,22 @@
 
       
         
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//对数组排序，在控制台输出数组中的最大值和最小值</div><div class="line">var ary = [8,9,5,7,8,12,14,19,22,1]</div></pre></td></tr></table></figure>
-<h3 id="数组排序法"><a href="#数组排序法" class="headerlink" title="数组排序法"></a>数组排序法</h3><blockquote>
-<p>先对数组进行由小到大的排序，排序后数组中的第一个是最大值，最后一个元素就是最大值</p>
+          
+            <hr>
+<blockquote>
+<p>昨天用原生js，写了一个获取元素具体信息值的getStyle函数,今天拿来测试，发现始终返回undefined,一顿debug,发现第9行，表达式计算过后，始终返回undefined。</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ary.sort(function(a,b)&#123;return a-b&#125;)  //使用数组的sort方法进行排序</div><div class="line">var min = ary[0];</div><div class="line">var max = ary[length-1];</div><div class="line">console.log(min,max)</div></pre></td></tr></table></figure>
-<h3 id="假设思想"><a href="#假设思想" class="headerlink" title="假设思想"></a>假设思想</h3><blockquote>
-<p>先假设数组的第一个元素就是最大或最小值，然后使用for循环对数组进行遍历，如果剩下的某一个数组元素比假设值大或小，则将该值赋值给min/max;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">function getStyle(ele,attr)&#123;</div><div class="line">var val = null,reg = null;</div><div class="line">//判断是否为标准浏览器</div><div class="line">if(&quot;getComputedStyle&quot; in window)&#123;</div><div class="line">	val = window.getComputedStyle(ele,attr)[attr];  //修改过了，原来是.attr</div><div class="line">	&#125;else&#123;</div><div class="line">//在非标准浏览器下对opacity属性，进行处理</div><div class="line">    if(attr===&quot;opacity&quot;)&#123;</div><div class="line">        val = ele.currentStyle.filter;</div><div class="line">        reg = /^alpha\(opacity=(\d+(?:\.\d+)?)\)$/i</div><div class="line">        val = reg.test(val)?reg.exec(val)[1]/100:1;</div><div class="line">        </div><div class="line">    &#125;else&#123;</div><div class="line">        val = ele.currentStyle[attr];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(val);</div><div class="line">//去单位</div><div class="line">reg = /^(-?\d+(\.\d+)?)(px|pt|em|rem)?$/i;</div><div class="line">return reg.test(val)?parseFloat(val):val;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>刚开始怀疑是getComputedStyle()方法写错了，复制到控制台，完美输出；于是怀疑是attr属性是字符串引起的，把val =window.getComputedStyle(ele,attr).attr改成val =window.getComputedStyle(ele,attr).height;这次结果就输出了，但是要怎么解决属性是字符串的问题，goole 获取属性值+字符串发现原来原来通过. 和[]获取属性值是有区别的；<strong>总结起来就是.后面需要直接跟对象里面的属性名称，e而不能通过是通过变量获取到的，[]里面可以是字符串或者变量，它可以通过变量获取属性名称</strong></p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var min = ary[0],max = ary[0];</div><div class="line">for(var i=1;i&lt;ary.length;i++)&#123;</div><div class="line">    var cur = ary[i];</div><div class="line">    min&gt;cur?min=cur:null;</div><div class="line">    max&lt;cur?max=cur:null;</div><div class="line">    &#125;</div><div class="line">    console.log(min,max);</div></pre></td></tr></table></figure>
-<h3 id="利用Math-max-和Math-min"><a href="#利用Math-max-和Math-min" class="headerlink" title="利用Math.max()和Math.min()"></a>利用Math.max()和Math.min()</h3>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/06/求数组中最大，最小值的四种方法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p><strong>例如：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;name1:&quot;xiaoming&quot;&#125;;</div><div class="line"></div><div class="line">var name = &quot;name1&quot;;</div><div class="line"></div><div class="line">obj.mame1   //&quot;xiaoming&quot;；</div><div class="line">obj.name    // undefined  表示说name这个属性根本不存在；</div><div class="line"></div><div class="line">//所以此时，我们可以使用</div><div class="line">obj[name]     //&quot;xiaoming&quot;</div></pre></td></tr></table></figure></p>
+<p><strong>小结</strong></p>
+<blockquote>
+<p>1.这世间本都是坑，填的多了，也就少了。<br>2.看权威指南第四章和第六章；</p>
+</blockquote>
+
+          
         
       
     </div>
@@ -743,7 +742,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/05/js中小括号()的用法详解/">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/25/this机制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="夏小北">
@@ -762,7 +761,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/10/05/js中小括号()的用法详解/" itemprop="url">js中小括号()的用法详解</a></h1>
+                <a class="post-title-link" href="/2017/10/25/this机制/" itemprop="url">彻底搞懂this机制</a></h1>
         
 
         <div class="post-meta">
@@ -774,8 +773,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-05T18:06:24+08:00">
-                2017-10-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-25T12:06:24+08:00">
+                2017-10-25
               </time>
             
 
@@ -835,182 +834,220 @@
 
       
         
-          <p>重点留意四.括号表达式</p>
-<h3 id="一-作为分组运算符"><a href="#一-作为分组运算符" class="headerlink" title="一.作为分组运算符:"></a>一.作为分组运算符:</h3><p>分组运算符应该是再熟悉不过了，因为在小学数学中就有应用，例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var a=(1+2)*4;</div><div class="line">console.log(a);</div></pre></td></tr></table></figure></p>
-<p>以上代码的输出值是12，因为分组运算符可以改变运算符的优先级，否则的话输出值是9。</p>
+          
+            <hr>
 <blockquote>
-<p>扩展说明:<br>1.很多教程说它是一个强制运算符，其实在ECMAScript中，根本就没有强制运算符这么一个概念，它就是普通分组运算符。<br>2.这也是为什么eval()函数将json格式字符串转换为对象需再嵌套一个小括号的原因，可以参阅使用eval()将json字符串转换为对象要多加一个小括号。</p>
+<p>javaScript这个迷人又令人困惑的混血儿，借鉴了多种编程语言的机制，这其中就包括就包括this机制。</p>
 </blockquote>
-<h3 id="二-函数声明和函数调用参数列表"><a href="#二-函数声明和函数调用参数列表" class="headerlink" title="二.函数声明和函数调用参数列表:"></a>二.函数声明和函数调用参数列表:</h3><p>在声明函数或者调动函数的时候，如果有参数，那么就会将参数放在小括号之中，代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function func(a,b)&#123;</div><div class="line">  //代码</div><div class="line">&#125;</div><div class="line">func(1,2);</div></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/05/js中小括号()的用法详解/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/09/28/Function.prototype.call()方法详解/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="夏小北">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="读墨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/28/Function.prototype.call()方法详解/" itemprop="url">Function.prototype.call()方法详解</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-28T21:06:24+08:00">
-                2017-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javaScript学习总结/" itemprop="url" rel="index">
-                    <span itemprop="name">javaScript学习总结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="call方法定义"><a href="#call方法定义" class="headerlink" title="call方法定义"></a>call方法定义</h3><blockquote>
-<p>call方法使一个函数具有一个指定的this值和分别提供的参数<br><strong>说人话</strong>：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；2.然后让函数执行。</p>
+<h3 id="this是什么？"><a href="#this是什么？" class="headerlink" title="this是什么？"></a>this是什么？</h3><blockquote>
+<p>在javascript里面，this是一个特殊的对象，它不像其他编程语言那样，是存储在实例中的值，直接指向此实例。而是作为一个单独的指针，自动定义于每一个函数域中，指向不同的位置，这也是为什么我们会将它搞混的原因。</p>
 </blockquote>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fun.call(thisArg,arg1,arg2,...)</div></pre></td></tr></table></figure>
-<blockquote>
-<p>thisArg<br>在fun函数运行时指定的this值，需要注意的是，指定的this值并不一定是该函数执行时真正的this值，如果这个函数处于非严格模式下，则指定为空，null和undefined的this值会自动的指向全局对象（浏览器中就是window对象），同时值为原始值（数字,布尔值,字符串）的this会指向该原始值自动包装对象。严格模式下，写什么传什么，但是空除外，会变成undefined;</p>
+<h3 id="为什么使用this"><a href="#为什么使用this" class="headerlink" title="为什么使用this"></a>为什么使用this</h3><blockquote>
+<p>this为代码复用提供了可能，让代码变得更加简洁和复用。</p>
 </blockquote>
-<h3 id="call方法中的this"><a href="#call方法中的this" class="headerlink" title="call方法中的this"></a>call方法中的this</h3><blockquote>
-<p>this是函数执行的上下文，当函数被调用时产生，因此call方法中肯定也有一个this值 ,那么call方法中的this是谁呢？<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fun.call(obj)  //此时call方法中this为window.fun</div><div class="line"></div><div class="line">obj1.fun.call(obj2)  //此时call方法中this为obj1.fun</div><div class="line"></div><div class="line">obj1.call.call(obj2)   //此时call方法中的this为obj1.call</div></pre></td></tr></table></figure></p>
+<h3 id="this的5条规则"><a href="#this的5条规则" class="headerlink" title="this的5条规则"></a>this的5条规则</h3><blockquote>
+<p>this到底绑定或者引用那个对象环境决定于函数被调用的地方。而函数的调用有着不同的方式，在不同的方式中调用决定this引用的是那个对象。</p>
 </blockquote>
-<hr>
-<h3 id="call方法实现原理"><a href="#call方法实现原理" class="headerlink" title="call方法实现原理"></a>call方法实现原理</h3><ol>
-<li><p>将被调用函数中的this值换为替换为thisArg;</p>
-</li>
-<li><p>执行call方法中的this();  //注意改函数的this，call方法中的this不受影响</p>
+<p>-&gt;我们一般只研究函数执行的时候里面的this</p>
+<p>-&gt;this是谁和当前的函数在哪执行和在哪定义没有半毛钱的关系</p>
+<p><strong>1)看函数执行的时候,函数名之前是否有”.”,有的话”.”前面是谁this就是谁,没有的话this就是window</strong></p>
+<p>oDiv.onclick=function(){</p>
+<p>//匿名函数中的this-&gt;oDiv<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">fn();//fn函数中的this-&gt;window</div><div class="line"></div><div class="line">&#125;;</div><div class="line"></div><div class="line">[].slice(0);//-&gt;slice中的this是[]</div><div class="line"></div><div class="line">[].__proto__.slice(0);//-&gt;slice中的this是Array.prototype</div><div class="line"></div><div class="line">--&gt;我们自己在数组原型中编写的方法,一般情况下我们函数中的this就是当前我们要操作的这个元素</div><div class="line"></div><div class="line">Array.prototype.distinct=function()&#123;</div><div class="line"></div><div class="line">//this-&gt;我们当前要操作的这个数组</div><div class="line"></div><div class="line">&#125;;</div><div class="line"></div><div class="line">[1,2,2,3,1,2,3,2,1].distinct();</div></pre></td></tr></table></figure></p>
+<p><strong>2)自执行函数中的this永远是window</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">(function()&#123; //this-&gt;window &#125;)();</div><div class="line"></div><div class="line">~function()&#123; //this-&gt;window &#125;();</div><div class="line"></div><div class="line">window.setTimeout(function()&#123;</div><div class="line"></div><div class="line">//this-&gt;window</div><div class="line"></div><div class="line">&#125;,10);</div><div class="line"></div><div class="line">ary.sort(function(a,b)&#123;</div><div class="line"></div><div class="line">//第一个匿名函数(参数)在执行的时候里面的 this-&gt;window</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line">ary.forEach(function()&#123;</div><div class="line"></div><div class="line">//第一个匿名函数(参数)在执行的时候里面的 this-&gt;window</div><div class="line"></div><div class="line">//但是如果context传递了值(第二个参数传递值了)那么这个方法中的this就是context</div><div class="line"></div><div class="line">&#125;,context);</div><div class="line"></div><div class="line">str.replace(reg,function()&#123;</div><div class="line"></div><div class="line">//this-&gt;window</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><strong>3)给元素的某一个事件绑定方法,当事件触发的时候,方法中的this是当前元素本身</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">//[DOM零级事件绑定]</div><div class="line"></div><div class="line">oDiv.onclick=function()&#123;</div><div class="line"></div><div class="line">//this-&gt;oDiv</div><div class="line"></div><div class="line">&#125;;</div><div class="line"></div><div class="line">//[DOM二级事件绑定]</div><div class="line"></div><div class="line">oDiv.addEventListener(&quot;click&quot;,function()&#123;</div><div class="line"></div><div class="line">//this-&gt;oDiv</div><div class="line"></div><div class="line">&#125;,false);</div><div class="line"></div><div class="line">//在IE6~8下使用attachEvent</div><div class="line"></div><div class="line">oDiv.attachEvent(&quot;click&quot;,function()&#123;</div><div class="line"></div><div class="line">//this-&gt;window</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><strong>4)在构造函数模式中,我们的this.xxx=xxx中的this是当前的类的一个实例</strong></p>
+<p>function Fn(){</p>
+<p>this.x=100;//this-&gt;f x是给当前实例f增加的私有的属性</p>
+<p>}</p>
+<p>Fn.prototype.getX=function(){</p>
+<p>console.log(this.x);</p>
+<p>};</p>
+<p>var f=new Fn;</p>
+<p>f.getX();//getX中的this-&gt;f</p>
+<p>f.<strong>proto</strong>.getX();//getX中的this-&gt;Fn.prototype</p>
+<p><strong>5)call和apply强制改变this的指向-&gt;以上所有的this情况在遇到call/apply的时候都不好使,都已强制改变的为主</strong></p>
+<p>obj.fn.call(1);//this-&gt;1</p>
+<p>一般情况下,我们执行call方法第一个传递的参数值是谁,那么fn中的this就是谁</p>
+<p>[在非严格模式下]</p>
+<p>第一个参数没有传递值、传递的是null、传递的是undefined fn中的this都是window</p>
+<p>[严格模式下]</p>
+<p>第一个参数传递的是谁this就是谁,传递null/undefined,fn中的this都是对应的null/undefined,不传递值默认也是undefined</p>
+<p><strong>小结</strong></p>
+<ol>
+<li>默认绑定全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"> 2. 隐式调用</div><div class="line">    function fn()&#123;</div><div class="line">    a=1;</div><div class="line">    console.log(this.a)</div><div class="line">&#125;</div><div class="line">var obj = &#123;</div><div class="line">    a=2,</div><div class="line">    fn:fn</div><div class="line">&#125;;</div><div class="line">obj.fn();     //2</div><div class="line"></div><div class="line">//只看倒数第一个小数点·前的对象；</div><div class="line">//即最后一个调用该函数的对象就是传到该函数的上下文；</div><div class="line">function fn()&#123;</div><div class="line">    console.log(this.a)</div><div class="line">    &#125;</div><div class="line">var obj2 = &#123;</div><div class="line"> a:42,</div><div class="line"> fn:fn</div><div class="line"> &#125;</div><div class="line"> var obj1 = &#123;</div><div class="line">    a:2,</div><div class="line">    obj2:obj2</div><div class="line">    &#125;</div><div class="line">obj1.obj2.fn()      //42;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<blockquote>
-<p>即call方法会把自身的第一个参数传给函数，使其做为函数的执行上下文，此时call方法中的this也会动态被修改；</p>
+<p>失去显示绑定<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;</div><div class="line">   cnsole.log(this.a)</div><div class="line">&#125;</div><div class="line">obj1 = &#123;</div><div class="line"> a:2,</div><div class="line"> fn:fn</div><div class="line">&#125;;</div><div class="line">var bar =obj1.fn;</div><div class="line">var a = &quot;全局变量&quot;</div><div class="line"></div><div class="line">bar()   //全局变量</div></pre></td></tr></table></figure></p>
+<ol>
+<li>显式绑定</li>
+</ol>
+<p>即通过call/apply/bind给函数传入this</p>
+<ol>
+<li>new实例绑定</li>
+</ol>
+<p>你以为 你以为的 就是你以为的</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/25/获取元素的具体样式信息/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="夏小北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读墨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/25/获取元素的具体样式信息/" itemprop="url">获取元素的具体样式信息</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-25T12:06:24+08:00">
+                2017-10-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javaScript学习总结/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript学习总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <hr>
+<p>个人学习笔记，不当之处欢迎斧正</p>
+<h3 id="获取元素具体信息的原理"><a href="#获取元素具体信息的原理" class="headerlink" title="获取元素具体信息的原理"></a>获取元素具体信息的原理</h3><blockquote>
+<p>通过js的盒子模型属性，有些样式信息无法获取到。但是我们可以使用其他方法获取到。<strong>第一种</strong>是通过/元素.style.属性/方法，它的局限是只能获取行内样式的值。<strong>第二种</strong>是通过window.getComputedStyle(ele,null)方法/ele.currentStyle.height(非标准浏览器下)</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;console.log(1)&#125;;</div><div class="line">function f2()&#123;console.log(2)&#125;;</div><div class="line"></div><div class="line">f1.call.call(f2);  // ???猜猜输出几</div></pre></td></tr></table></figure>
+<h3 id="编写兼容非标准浏览器的函数的常用方法"><a href="#编写兼容非标准浏览器的函数的常用方法" class="headerlink" title="编写兼容非标准浏览器的函数的常用方法"></a>编写兼容非标准浏览器的函数的常用方法</h3><ol>
+<li>使用try…catch方法</li>
+<li>检测属性在window下是否存在</li>
+<li>检测浏览器类型及版本号</li>
+</ol>
+<h3 id="使用函数封装兼容非标准浏览器的方法"><a href="#使用函数封装兼容非标准浏览器的方法" class="headerlink" title="使用函数封装兼容非标准浏览器的方法"></a>使用函数封装兼容非标准浏览器的方法</h3><blockquote>
+<p>使用上述原理实现兼容非标准浏览器的获取元素信息的方法</p>
+</blockquote>
+<p><strong>使用try…catch</strong></p>
+<blockquote>
+<p>缺点：在非标准浏览器下要执行两次，浪费性能</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function getStyle(ele,attr)&#123;</div><div class="line">	var val = null;</div><div class="line">	try&#123;</div><div class="line">		val = window.getComputedStyle(ele,null).attr;</div><div class="line">	&#125;catch(e)&#123;</div><div class="line">		val = ele.currentStyle.attr;</div><div class="line">	&#125;</div><div class="line">	return val;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>使用检测属性是否存在的方法</strong><br>版本一：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function getStyle(ele,attr)&#123;</div><div class="line">		var val = null;</div><div class="line">		if(&quot;getComputedStyle&quot; in window)&#123;</div><div class="line">			val = window.getComputedStyle(ele,null).attr;</div><div class="line">		&#125;else&#123;</div><div class="line">			val = ele.currentStyle.attr;</div><div class="line">		&#125;</div><div class="line">		return val;</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/09/28/Function.prototype.call()方法详解/#more" rel="contents">
+            <a class="btn" href="/2017/10/25/获取元素的具体样式信息/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1090,7 +1127,7 @@
                alt="夏小北" />
           <p class="site-author-name" itemprop="name">夏小北</p>
            
-              <p class="site-description motion-element" itemprop="description">岁月像一场有去无回的旅行，好的坏的都是风景。</p>
+              <p class="site-description motion-element" itemprop="description">speak is cheaper ,show me the code,code never lie,NEVER。</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -1100,7 +1137,7 @@
             
               <a href="/archives">
             
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1111,7 +1148,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1122,7 +1159,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

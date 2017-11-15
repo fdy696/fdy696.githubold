@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="call方法定义 call方法使一个函数具有一个指定的this值和分别提供的参数说人话：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；2.然后让函数执行。  语法1fun.call(thisArg,arg1,arg2,...)  thisArg在fun函数运行时指定的this值，需要注意的是，指定的this值并不一定是该函数执行时真正的this值，">
+<meta name="description" content="call方法定义 call方法使一个函数具有一个指定的this值和分别提供的参数说人话：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；            2.然后让自己的this值执行。（通常为前面的方法,但也有例外，见下方）  语法1fun.call(thisArg,arg1,arg2,...)  thisArg在fun函数运行时指定的thi">
 <meta name="keywords" content="javaScript学习总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Function.prototype.call()方法详解">
 <meta property="og:url" content="http://life.fengyong.com/2017/09/28/Function.prototype.call()方法详解/index.html">
 <meta property="og:site_name" content="读墨">
-<meta property="og:description" content="call方法定义 call方法使一个函数具有一个指定的this值和分别提供的参数说人话：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；2.然后让函数执行。  语法1fun.call(thisArg,arg1,arg2,...)  thisArg在fun函数运行时指定的this值，需要注意的是，指定的this值并不一定是该函数执行时真正的this值，">
+<meta property="og:description" content="call方法定义 call方法使一个函数具有一个指定的this值和分别提供的参数说人话：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；            2.然后让自己的this值执行。（通常为前面的方法,但也有例外，见下方）  语法1fun.call(thisArg,arg1,arg2,...)  thisArg在fun函数运行时指定的thi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-28T15:32:03.474Z">
+<meta property="og:updated_time" content="2017-11-01T01:56:30.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Function.prototype.call()方法详解">
-<meta name="twitter:description" content="call方法定义 call方法使一个函数具有一个指定的this值和分别提供的参数说人话：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；2.然后让函数执行。  语法1fun.call(thisArg,arg1,arg2,...)  thisArg在fun函数运行时指定的this值，需要注意的是，指定的this值并不一定是该函数执行时真正的this值，">
+<meta name="twitter:description" content="call方法定义 call方法使一个函数具有一个指定的this值和分别提供的参数说人话：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；            2.然后让自己的this值执行。（通常为前面的方法,但也有例外，见下方）  语法1fun.call(thisArg,arg1,arg2,...)  thisArg在fun函数运行时指定的thi">
 
 
 
@@ -369,7 +369,7 @@
 
       
         <h3 id="call方法定义"><a href="#call方法定义" class="headerlink" title="call方法定义"></a>call方法定义</h3><blockquote>
-<p>call方法使一个函数具有一个指定的this值和分别提供的参数<br><strong>说人话</strong>：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；2.然后让函数执行。</p>
+<p>call方法使一个函数具有一个指定的this值和分别提供的参数<br><strong>说人话</strong>：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；<br>            2.然后让自己的this值执行。（通常为前面的方法,但也有例外，见下方）</p>
 </blockquote>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fun.call(thisArg,arg1,arg2,...)</div></pre></td></tr></table></figure>
 <blockquote>
@@ -386,7 +386,7 @@
 </li>
 </ol>
 <blockquote>
-<p>即call方法会把自身的第一个参数传给函数，使其做为函数的执行上下文，此时call方法中的this也会动态被修改；</p>
+<p>即call方法会把自身的第一个参数传给函数，并让改变了this值的函数执行；</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;console.log(1)&#125;;</div><div class="line">function f2()&#123;console.log(2)&#125;;</div><div class="line"></div><div class="line">f1.call.call(f2);  // ???猜猜输出几</div></pre></td></tr></table></figure>
  <a id="more"></a>
@@ -396,15 +396,15 @@
 <ul>
 <li><p>call()方法被调用，先将f2传给自己调用的函数，替换他的this值</p>
 </li>
-<li><p>然后call方法中的this执行</p>
+<li><p>然后让改变了this值的函数执行   //实现原理为this();</p>
 </li>
 </ul>
 </li>
 </ul>
 <ol>
 <li><p>很明显call(f2)的this值为f1.call,f1.call方法中的this值f1被替换成f2</p>
-<p> 2.然后f2.call作为cal这个函数作为(f2)的this值被执行；</p>
-<p> 3.f2.call() //call方法中为空，所以此时不改变f2中的this，其实这会改变也没影响，f2作为非f2.call（）的this被执行，输出2;</p>
+<p> 2.然后改变了this值的f1.call作为call方法的this值被执行；</p>
+<p> 3.f1.call() // 再次执行call方法,因为call方法中参数为空,f1函数中的this变为window;<br> //call方法中的this值f2执行,</p>
 </li>
 </ol>
 <p>练习题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">f1.call();</div><div class="line">f1.call(null) //非严格模式下</div><div class="line">f1.call.call(null) //非严格模式下</div><div class="line">分析第二行和第三行代码执行结果不同的原因</div><div class="line">Function.prototype.call(f2)  //undefined,函数类原型即使对象也是一个空函数</div><div class="line">f1.call.call(2);</div><div class="line">f1.call.call(true);</div></pre></td></tr></table></figure></p>
@@ -414,7 +414,7 @@
 <p><strong>不同点</strong><br>call: fn.call(thisArg,arg1,arg2,arg3);<br>apply: fn.call(thisArg,[arg1,arg2,arg3])<br>apply在给参数进行传参时不是一个个传递的，而是把参数放在一个数组中，但是也相当于给参数一个个赋值；只不过以数组的形式把实参包裹起来；</p>
 <p><strong>bind</strong></p>
 <blockquote>
-<p>bind方法在ie6–ie8不兼容<br>表达式： fn.bind(thisArg,arg1,arg2,arg3)<br>bind方法改变函数的this值，并且可以给函数传递参数，但是不执行函数，而是把改变了this的函数进行yin隐式返回；</p>
+<p>bind方法在ie6–ie8不兼容<br>表达式： fn.bind(thisArg,arg1,arg2,arg3)<br>bind方法改变函数的this值，并且可以给函数传递参数，但是不执行函数，而是把改变了this的函数进行隐式返回；</p>
 </blockquote>
 
       
@@ -446,18 +446,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/28/javaScript预解析总结/" rel="next" title="js预解析总结">
-                <i class="fa fa-chevron-left"></i> js预解析总结
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/05/js中小括号()的用法详解/" rel="prev" title="js中小括号()的用法详解">
-                js中小括号()的用法详解 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/28/javaScript预解析总结/" rel="prev" title="js预解析总结">
+                js预解析总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -527,7 +523,7 @@
                alt="夏小北" />
           <p class="site-author-name" itemprop="name">夏小北</p>
            
-              <p class="site-description motion-element" itemprop="description">岁月像一场有去无回的旅行，好的坏的都是风景。</p>
+              <p class="site-description motion-element" itemprop="description">speak is cheaper ,show me the code,code never lie,NEVER。</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -537,7 +533,7 @@
             
               <a href="/archives">
             
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -548,7 +544,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -559,7 +555,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

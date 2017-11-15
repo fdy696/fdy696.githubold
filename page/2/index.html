@@ -95,16 +95,16 @@
 
 
 
-<meta name="description" content="岁月像一场有去无回的旅行，好的坏的都是风景。">
+<meta name="description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="读墨">
 <meta property="og:url" content="http://life.fengyong.com/page/2/index.html">
 <meta property="og:site_name" content="读墨">
-<meta property="og:description" content="岁月像一场有去无回的旅行，好的坏的都是风景。">
+<meta property="og:description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="读墨">
-<meta name="twitter:description" content="岁月像一场有去无回的旅行，好的坏的都是风景。">
+<meta name="twitter:description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
 
 
 
@@ -264,6 +264,469 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/06/求数组中最大，最小值的四种方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="夏小北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读墨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/06/求数组中最大，最小值的四种方法/" itemprop="url">求数组中最大,最小值的四种方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-06T18:06:24+08:00">
+                2017-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javaScript学习总结/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript学习总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//对数组排序，在控制台输出数组中的最大值和最小值</div><div class="line">var ary = [8,9,5,7,8,12,14,19,22,1]</div></pre></td></tr></table></figure>
+<h3 id="数组排序法"><a href="#数组排序法" class="headerlink" title="数组排序法"></a>数组排序法</h3><blockquote>
+<p>先对数组进行由小到大的排序，排序后数组中的第一个是最大值，最后一个元素就是最大值</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ary.sort(function(a,b)&#123;return a-b&#125;)  //使用数组的sort方法进行排序</div><div class="line">var min = ary[0];</div><div class="line">var max = ary[length-1];</div><div class="line">console.log(min,max)</div></pre></td></tr></table></figure>
+<h3 id="假设思想"><a href="#假设思想" class="headerlink" title="假设思想"></a>假设思想</h3><blockquote>
+<p>先假设数组的第一个元素就是最大或最小值，然后使用for循环对数组进行遍历，如果剩下的某一个数组元素比假设值大或小，则将该值赋值给min/max;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var min = ary[0],max = ary[0];</div><div class="line">for(var i=1;i&lt;ary.length;i++)&#123;</div><div class="line">    var cur = ary[i];</div><div class="line">    min&gt;cur?min=cur:null;</div><div class="line">    max&lt;cur?max=cur:null;</div><div class="line">    &#125;</div><div class="line">    console.log(min,max);</div></pre></td></tr></table></figure>
+<h3 id="利用Math-max-和Math-min"><a href="#利用Math-max-和Math-min" class="headerlink" title="利用Math.max()和Math.min()"></a>利用Math.max()和Math.min()</h3>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/06/求数组中最大，最小值的四种方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/05/10 模仿投票实战/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="夏小北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读墨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/05/10 模仿投票实战/" itemprop="url">js原生特效--模仿投票</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-05T18:06:24+08:00">
+                2017-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js原生特效/" itemprop="url" rel="index">
+                    <span itemprop="name">js原生特效</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>实现原理：</p>
+<ol>
+<li>原理一： 利用innerHTMLinnerHTML属性实现值的存取；</li>
+<li>原理二： 利用闭包阻断垃圾回收机制，实现私有作用域变量的累加；</li>
+<li>原理三： 利用自定义属性，存取值；</li>
+</ol>
+<blockquote>
+<p>推荐使用第三种方法，因为第一种每次存取都会使得页面重新渲染；第二种方法会导致私有作用域一直存在堆内存中得不到回收；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;10模仿投票案例&lt;/title&gt;</div><div class="line">	&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">		#box &#123;</div><div class="line">			margin: 20px auto;</div><div class="line">			width: 500px;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		#box h2 &#123;</div><div class="line">			padding-bottom: 20px;</div><div class="line">			border-bottom: 1px dashed green;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		#box div &#123;</div><div class="line">			background: #ebebeb;</div><div class="line">			text-align: center;</div><div class="line">			height: 30px;</div><div class="line">			line-height: 30px;</div><div class="line">			user-select: none;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		#box div span &#123;</div><div class="line">			font-weight: bold;</div><div class="line">			color:red;</div><div class="line">			cursor: pointer;</div><div class="line">		&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=&quot;box&quot;&gt;</div><div class="line">		&lt;h2&gt;请为猫咪疯狂打call&lt;/h2&gt;</div><div class="line">		&lt;div id=&quot;text&quot;&gt;</div><div class="line">			&lt;p&gt;我非常赞同上面的观点 &amp;nbsp&lt;span id=&quot;span&quot;&gt;0&lt;/span&gt;&lt;/p&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">		var oSpan = document.getElementById(&quot;span&quot;),</div><div class="line">			oText = document.getElementById(&quot;text&quot;);</div><div class="line">			//count = 0;</div><div class="line"></div><div class="line">		// oSpan.onmousedown = function()&#123;</div><div class="line">		// 	//弊端，每次都需要重新添加进去，需要重新渲染;</div><div class="line">		// 	// oSpan.innerHTML++;</div><div class="line">		// 	//方法2全局作用域</div><div class="line">		// 	// count++</div><div class="line">		// 	// oSpan.innerHTML = count;</div><div class="line">		// 	// oText.style.background=&quot;orange&quot;;</div><div class="line"></div><div class="line">		// 	//方法1</div><div class="line"></div><div class="line">		// 		count++;</div><div class="line">		// 		oSpan.innerHTML = count;</div><div class="line">		// &#125;</div><div class="line"></div><div class="line">		//=====方法3 形成不销毁的私有作用域=========</div><div class="line">		//========弊端：有一个私有的不销毁的作用域</div><div class="line">		// oSpan.onmousedown = (function ()&#123;</div><div class="line">		// 	var count = 0;</div><div class="line">		// 	return function ()&#123;</div><div class="line">		// 		count++</div><div class="line">		// 		oSpan.innerHTML = count;</div><div class="line">		// 		oText.style.background = &quot;orange&quot;</div><div class="line">		// 	&#125;</div><div class="line">		// &#125;)();</div><div class="line"></div><div class="line">		oSpan.onmouseup = function()&#123;</div><div class="line">			oText.style.background=&quot;#efefef&quot;;</div><div class="line">		&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">		//推荐方法4 利用自定义属性方式 </div><div class="line">		oSpan.count = 0;</div><div class="line">		oSpan.onmousedown = function () &#123;</div><div class="line">			oSpan.innerHTML = ++this.count;</div><div class="line">			oText.style.background=&quot;orange&quot;;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<!-- //私有作用域不被销毁的三种情况;
+1) 在这个私有作用域里面给某个元素绑定方法
+2) 函数执行返回一个引用类型值，被一个变量所接收；
+3) 连续执行函数不立即销毁； -->
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/05/js中小括号()的用法详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="夏小北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读墨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/05/js中小括号()的用法详解/" itemprop="url">js中小括号()的用法详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-05T18:06:24+08:00">
+                2017-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javaScript学习总结/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript学习总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>重点留意四.括号表达式</p>
+<h3 id="一-作为分组运算符"><a href="#一-作为分组运算符" class="headerlink" title="一.作为分组运算符:"></a>一.作为分组运算符:</h3><p>分组运算符应该是再熟悉不过了，因为在小学数学中就有应用，例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var a=(1+2)*4;</div><div class="line">console.log(a);</div></pre></td></tr></table></figure></p>
+<p>以上代码的输出值是12，因为分组运算符可以改变运算符的优先级，否则的话输出值是9。</p>
+<blockquote>
+<p>扩展说明:<br>1.很多教程说它是一个强制运算符，其实在ECMAScript中，根本就没有强制运算符这么一个概念，它就是普通分组运算符。<br>2.这也是为什么eval()函数将json格式字符串转换为对象需再嵌套一个小括号的原因，可以参阅使用eval()将json字符串转换为对象要多加一个小括号。</p>
+</blockquote>
+<h3 id="二-函数声明和函数调用参数列表"><a href="#二-函数声明和函数调用参数列表" class="headerlink" title="二.函数声明和函数调用参数列表:"></a>二.函数声明和函数调用参数列表:</h3><p>在声明函数或者调动函数的时候，如果有参数，那么就会将参数放在小括号之中，代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function func(a,b)&#123;</div><div class="line">  //代码</div><div class="line">&#125;</div><div class="line">func(1,2);</div></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/05/js中小括号()的用法详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -443,6 +906,172 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/09/28/Function.prototype.call()方法详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="夏小北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读墨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/28/Function.prototype.call()方法详解/" itemprop="url">Function.prototype.call()方法详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-28T21:06:24+08:00">
+                2017-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javaScript学习总结/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript学习总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="call方法定义"><a href="#call方法定义" class="headerlink" title="call方法定义"></a>call方法定义</h3><blockquote>
+<p>call方法使一个函数具有一个指定的this值和分别提供的参数<br><strong>说人话</strong>：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；<br>            2.然后让自己的this值执行。（通常为前面的方法,但也有例外，见下方）</p>
+</blockquote>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fun.call(thisArg,arg1,arg2,...)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>thisArg<br>在fun函数运行时指定的this值，需要注意的是，指定的this值并不一定是该函数执行时真正的this值，如果这个函数处于非严格模式下，则指定为空，null和undefined的this值会自动的指向全局对象（浏览器中就是window对象），同时值为原始值（数字,布尔值,字符串）的this会指向该原始值自动包装对象。严格模式下，写什么传什么，但是空除外，会变成undefined;</p>
+</blockquote>
+<h3 id="call方法中的this"><a href="#call方法中的this" class="headerlink" title="call方法中的this"></a>call方法中的this</h3><blockquote>
+<p>this是函数执行的上下文，当函数被调用时产生，因此call方法中肯定也有一个this值 ,那么call方法中的this是谁呢？<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fun.call(obj)  //此时call方法中this为window.fun</div><div class="line"></div><div class="line">obj1.fun.call(obj2)  //此时call方法中this为obj1.fun</div><div class="line"></div><div class="line">obj1.call.call(obj2)   //此时call方法中的this为obj1.call</div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<h3 id="call方法实现原理"><a href="#call方法实现原理" class="headerlink" title="call方法实现原理"></a>call方法实现原理</h3><ol>
+<li><p>将被调用函数中的this值换为替换为thisArg;</p>
+</li>
+<li><p>执行call方法中的this();  //注意改函数的this，call方法中的this不受影响</p>
+</li>
+</ol>
+<blockquote>
+<p>即call方法会把自身的第一个参数传给函数，并让改变了this值的函数执行；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;console.log(1)&#125;;</div><div class="line">function f2()&#123;console.log(2)&#125;;</div><div class="line"></div><div class="line">f1.call.call(f2);  // ???猜猜输出几</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/28/Function.prototype.call()方法详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -485,7 +1114,7 @@
                alt="夏小北" />
           <p class="site-author-name" itemprop="name">夏小北</p>
            
-              <p class="site-description motion-element" itemprop="description">岁月像一场有去无回的旅行，好的坏的都是风景。</p>
+              <p class="site-description motion-element" itemprop="description">speak is cheaper ,show me the code,code never lie,NEVER。</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -495,7 +1124,7 @@
             
               <a href="/archives">
             
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -506,7 +1135,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -517,7 +1146,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="填坑总结 js学习笔记," />
 
 
 
@@ -95,16 +95,18 @@
 
 
 
-<meta name="description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="读墨">
-<meta property="og:url" content="http://life.fengyong.com/tags/javaScript学习总结-eavl-括号表达式-apply传参/index.html">
+<meta name="description" content="昨天用原生js，写了一个获取元素具体信息值的getStyle函数,今天拿来测试，发现始终返回undefined,一顿debug,发现第9行，表达式计算过后，始终返回undefined。  12345678910111213141516171819202122function getStyle(ele,attr)&amp;#123;var val = null,reg = null;//判断是否为标准浏">
+<meta name="keywords" content="填坑总结 js学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="填坑系列--通过.和[]获取属性值的区别">
+<meta property="og:url" content="http://life.fengyong.com/2017/10/28/填坑系列--通过.和[]获取属性值的区别/index.html">
 <meta property="og:site_name" content="读墨">
-<meta property="og:description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
+<meta property="og:description" content="昨天用原生js，写了一个获取元素具体信息值的getStyle函数,今天拿来测试，发现始终返回undefined,一顿debug,发现第9行，表达式计算过后，始终返回undefined。  12345678910111213141516171819202122function getStyle(ele,attr)&amp;#123;var val = null,reg = null;//判断是否为标准浏">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-15T11:58:28.054Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="读墨">
-<meta name="twitter:description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
+<meta name="twitter:title" content="填坑系列--通过.和[]获取属性值的区别">
+<meta name="twitter:description" content="昨天用原生js，写了一个获取元素具体信息值的getStyle函数,今天拿来测试，发现始终返回undefined,一顿debug,发现第9行，表达式计算过后，始终返回undefined。  12345678910111213141516171819202122function getStyle(ele,attr)&amp;#123;var val = null,reg = null;//判断是否为标准浏">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://life.fengyong.com/tags/javaScript学习总结-eavl-括号表达式-apply传参/"/>
+  <link rel="canonical" href="http://life.fengyong.com/2017/10/28/填坑系列--通过.和[]获取属性值的区别/"/>
 
 
 
 
 
-  <title>标签: javaScript学习总结 eavl() 括号表达式 apply传参 | 读墨</title>
+  <title>填坑系列--通过.和[]获取属性值的区别 | 读墨</title>
   
 
 
@@ -159,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -263,54 +265,185 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>javaScript学习总结 eavl() 括号表达式 apply传参<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/28/填坑系列--通过.和[]获取属性值的区别/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="夏小北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读墨">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/10/06/求数组中最大，最小值的四种方法/" itemprop="url">
-              
-                <span itemprop="name">求数组中最大,最小值的四种方法</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">填坑系列--通过.和[]获取属性值的区别</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-06T18:06:24+08:00"
-              content="2017-10-06" >
-          10-06
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-28T12:06:24+08:00">
+                2017-10-28
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/填坑系列/" itemprop="url" rel="index">
+                    <span itemprop="name">填坑系列</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<blockquote>
+<p>昨天用原生js，写了一个获取元素具体信息值的getStyle函数,今天拿来测试，发现始终返回undefined,一顿debug,发现第9行，表达式计算过后，始终返回undefined。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">function getStyle(ele,attr)&#123;</div><div class="line">var val = null,reg = null;</div><div class="line">//判断是否为标准浏览器</div><div class="line">if(&quot;getComputedStyle&quot; in window)&#123;</div><div class="line">	val = window.getComputedStyle(ele,attr)[attr];  //修改过了，原来是.attr</div><div class="line">	&#125;else&#123;</div><div class="line">//在非标准浏览器下对opacity属性，进行处理</div><div class="line">    if(attr===&quot;opacity&quot;)&#123;</div><div class="line">        val = ele.currentStyle.filter;</div><div class="line">        reg = /^alpha\(opacity=(\d+(?:\.\d+)?)\)$/i</div><div class="line">        val = reg.test(val)?reg.exec(val)[1]/100:1;</div><div class="line">        </div><div class="line">    &#125;else&#123;</div><div class="line">        val = ele.currentStyle[attr];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(val);</div><div class="line">//去单位</div><div class="line">reg = /^(-?\d+(\.\d+)?)(px|pt|em|rem)?$/i;</div><div class="line">return reg.test(val)?parseFloat(val):val;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>刚开始怀疑是getComputedStyle()方法写错了，复制到控制台，完美输出；于是怀疑是attr属性是字符串引起的，把val =window.getComputedStyle(ele,attr).attr改成val =window.getComputedStyle(ele,attr).height;这次结果就输出了，但是要怎么解决属性是字符串的问题，goole 获取属性值+字符串发现原来原来通过. 和[]获取属性值是有区别的；<strong>总结起来就是.后面需要直接跟对象里面的属性名称，e而不能通过是通过变量获取到的，[]里面可以是字符串或者变量，它可以通过变量获取属性名称</strong></p>
+</blockquote>
+<p><strong>例如：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;name1:&quot;xiaoming&quot;&#125;;</div><div class="line"></div><div class="line">var name = &quot;name1&quot;;</div><div class="line"></div><div class="line">obj.mame1   //&quot;xiaoming&quot;；</div><div class="line">obj.name    // undefined  表示说name这个属性根本不存在；</div><div class="line"></div><div class="line">//所以此时，我们可以使用</div><div class="line">obj[name]     //&quot;xiaoming&quot;</div></pre></td></tr></table></figure></p>
+<p><strong>小结</strong></p>
+<blockquote>
+<p>1.这世间本都是坑，填的多了，也就少了。<br>2.看权威指南第四章和第六章；</p>
+</blockquote>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/填坑总结-js学习笔记/" rel="tag"># 填坑总结 js学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/25/this机制/" rel="next" title="彻底搞懂this机制">
+                <i class="fa fa-chevron-left"></i> 彻底搞懂this机制
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2999/06/28/前端学习路线 /" rel="prev" title="前端学习大纲">
+                前端学习大纲 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -318,6 +451,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -578,10 +715,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
