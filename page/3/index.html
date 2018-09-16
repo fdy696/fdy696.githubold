@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javaScript学习总结," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -95,18 +95,16 @@
 
 
 
-<meta name="description" content="个人学习总结，不当之处欢迎斧正  /手动doge脸 理解声明和定义声明(declare)：告诉浏览器在当前作用域中存在的变量名或者函数名（变量名和函数名以及函数形参都是标识符，通过标识符对值进行获取或存储）；1var sum  //告诉js，让他在内存中寻找一处空白，并给这个空间放置名字为a的书签，此时内存中默认值为undefined； 定义：从作用域中通过标识符，找到值得存储位置（普通数据类型在">
-<meta name="keywords" content="javaScript学习总结">
-<meta property="og:type" content="article">
-<meta property="og:title" content="js预解析总结">
-<meta property="og:url" content="http://life.fengyong.com/2017/09/28/javaScript预解析总结/index.html">
+<meta name="description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="读墨">
+<meta property="og:url" content="http://life.fengyong.com/page/3/index.html">
 <meta property="og:site_name" content="读墨">
-<meta property="og:description" content="个人学习总结，不当之处欢迎斧正  /手动doge脸 理解声明和定义声明(declare)：告诉浏览器在当前作用域中存在的变量名或者函数名（变量名和函数名以及函数形参都是标识符，通过标识符对值进行获取或存储）；1var sum  //告诉js，让他在内存中寻找一处空白，并给这个空间放置名字为a的书签，此时内存中默认值为undefined； 定义：从作用域中通过标识符，找到值得存储位置（普通数据类型在">
+<meta property="og:description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-28T15:38:36.574Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js预解析总结">
-<meta name="twitter:description" content="个人学习总结，不当之处欢迎斧正  /手动doge脸 理解声明和定义声明(declare)：告诉浏览器在当前作用域中存在的变量名或者函数名（变量名和函数名以及函数形参都是标识符，通过标识符对值进行获取或存储）；1var sum  //告诉js，让他在内存中寻找一处空白，并给这个空间放置名字为a的书签，此时内存中默认值为undefined； 定义：从作用域中通过标识符，找到值得存储位置（普通数据类型在">
+<meta name="twitter:title" content="读墨">
+<meta name="twitter:description" content="speak is cheaper ,show me the code,code never lie,NEVER。">
 
 
 
@@ -136,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://life.fengyong.com/2017/09/28/javaScript预解析总结/"/>
+  <link rel="canonical" href="http://life.fengyong.com/page/3/"/>
 
 
 
 
 
-  <title>js预解析总结 | 读墨</title>
+  <title>读墨 - smile to your life</title>
   
 
 
@@ -161,7 +159,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -264,9 +263,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -279,7 +278,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/09/28/javaScript预解析总结/">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/09/28/Function.prototype.call()方法详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="夏小北">
@@ -296,7 +295,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js预解析总结</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/28/Function.prototype.call()方法详解/" itemprop="url">Function.prototype.call()方法详解</a></h1>
         
 
         <div class="post-meta">
@@ -368,7 +369,175 @@
       
 
       
-        <p>个人学习总结，不当之处欢迎斧正  /手动doge脸</p>
+        
+          <h3 id="call方法定义"><a href="#call方法定义" class="headerlink" title="call方法定义"></a>call方法定义</h3><blockquote>
+<p>call方法使一个函数具有一个指定的this值和分别提供的参数<br><strong>说人话</strong>：call方法只做两件事，1.让call方法前面的函数中的this变成call方法中的第一个参数；<br>            2.然后让自己的this值执行。（通常为前面的方法,但也有例外，见下方）</p>
+</blockquote>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fun.call(thisArg,arg1,arg2,...)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>thisArg<br>在fun函数运行时指定的this值，需要注意的是，指定的this值并不一定是该函数执行时真正的this值，如果这个函数处于非严格模式下，则指定为空，null和undefined的this值会自动的指向全局对象（浏览器中就是window对象），同时值为原始值（数字,布尔值,字符串）的this会指向该原始值自动包装对象。严格模式下，写什么传什么，但是空除外，会变成undefined;</p>
+</blockquote>
+<h3 id="call方法中的this"><a href="#call方法中的this" class="headerlink" title="call方法中的this"></a>call方法中的this</h3><blockquote>
+<p>this是函数执行的上下文，当函数被调用时产生，因此call方法中肯定也有一个this值 ,那么call方法中的this是谁呢？<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fun.call(obj)  //此时call方法中this为window.fun</div><div class="line"></div><div class="line">obj1.fun.call(obj2)  //此时call方法中this为obj1.fun</div><div class="line"></div><div class="line">obj1.call.call(obj2)   //此时call方法中的this为obj1.call</div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<h3 id="call方法实现原理"><a href="#call方法实现原理" class="headerlink" title="call方法实现原理"></a>call方法实现原理</h3><ol>
+<li><p>将被调用函数中的this值换为替换为thisArg;</p>
+</li>
+<li><p>执行call方法中的this();  //注意改函数的this，call方法中的this不受影响</p>
+</li>
+</ol>
+<blockquote>
+<p>即call方法会把自身的第一个参数传给函数，并让改变了this值的函数执行；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;console.log(1)&#125;;</div><div class="line">function f2()&#123;console.log(2)&#125;;</div><div class="line"></div><div class="line">f1.call.call(f2);  // ???猜猜输出几</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/28/Function.prototype.call()方法详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/09/28/javaScript预解析总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="夏小北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读墨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/28/javaScript预解析总结/" itemprop="url">js预解析总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-28T21:06:24+08:00">
+                2017-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javaScript学习总结/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript学习总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>个人学习总结，不当之处欢迎斧正  /手动doge脸</p>
 <h3 id="理解声明和定义"><a href="#理解声明和定义" class="headerlink" title="理解声明和定义"></a>理解声明和定义</h3><p>声明(declare)：告诉浏览器在当前作用域中存在的变量名或者函数名（变量名和函数名以及函数形参都是标识符，通过标识符对值进行获取或存储）；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var sum  //告诉js，让他在内存中寻找一处空白，并给这个空间放置名字为a的书签，此时内存中默认值为undefined；</div></pre></td></tr></table></figure></p>
 <p>定义：从作用域中通过标识符，找到值得存储位置（普通数据类型在栈内存，引用类型在堆内存），并将值存入；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">num = 10;  // 通过num标识符向变量为num的内存地址写入10；原来的默认值就被覆盖了</div></pre></td></tr></table></figure></p>
 <h2 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h2><h3 id="什么是预解析："><a href="#什么是预解析：" class="headerlink" title="什么是预解析："></a>什么是预解析：</h3><blockquote>
@@ -406,6 +575,8 @@
 <p>5.return不影响预解析</p>
 <p>一个有趣的bug<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function toArray2()&#123;</div><div class="line">			 ary = Array.prototype.slice.call(arguments);</div><div class="line">			//a.slice.call(arguments);</div><div class="line">			a = 2255;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		toArray2(1,5,8);  //虽然全局不带var定义了a=2555,如果函数不执行，则无法读取a;</div><div class="line">		console.log(a);</div></pre></td></tr></table></figure></p>
 
+          
+        
       
     </div>
     
@@ -420,36 +591,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/javaScript学习总结/" rel="tag"># javaScript学习总结</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/28/Function.prototype.call()方法详解/" rel="prev" title="Function.prototype.call()方法详解">
-                Function.prototype.call()方法详解 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -459,11 +608,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
 
 
           </div>
@@ -471,10 +623,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -495,17 +643,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://life.zhangxingqiu.cn/images/avatar.jpg"
@@ -619,22 +758,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#理解声明和定义"><span class="nav-number">1.</span> <span class="nav-text">理解声明和定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预解析"><span class="nav-number"></span> <span class="nav-text">预解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是预解析："><span class="nav-number">1.</span> <span class="nav-text">什么是预解析：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预解释的作用："><span class="nav-number">2.</span> <span class="nav-text">预解释的作用：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var和function预解释的不同"><span class="nav-number">3.</span> <span class="nav-text">var和function预解释的不同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局作用域和局部作用域解析步骤的差异"><span class="nav-number">4.</span> <span class="nav-text">全局作用域和局部作用域解析步骤的差异</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预解析需要注意的问题："><span class="nav-number">5.</span> <span class="nav-text">预解析需要注意的问题：</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -753,10 +876,10 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-
+  
 
   
 
