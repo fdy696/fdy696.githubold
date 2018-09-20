@@ -442,198 +442,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/25/this机制/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="夏小北">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="读墨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/25/this机制/" itemprop="url">彻底搞懂this机制</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-25T12:06:24+08:00">
-                2017-10-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javaScript学习总结/" itemprop="url" rel="index">
-                    <span itemprop="name">javaScript学习总结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<blockquote>
-<p>javaScript这个迷人又令人困惑的混血儿，借鉴了多种编程语言的机制，这其中就包括就包括this机制。</p>
-</blockquote>
-<h3 id="this是什么？"><a href="#this是什么？" class="headerlink" title="this是什么？"></a>this是什么？</h3><blockquote>
-<p>在javascript里面，this是一个特殊的对象，它不像其他编程语言那样，是存储在实例中的值，直接指向此实例。而是作为一个单独的指针，自动定义于每一个函数域中，指向不同的位置，这也是为什么我们会将它搞混的原因。</p>
-</blockquote>
-<h3 id="为什么使用this"><a href="#为什么使用this" class="headerlink" title="为什么使用this"></a>为什么使用this</h3><blockquote>
-<p>this为代码复用提供了可能，让代码变得更加简洁和复用。</p>
-</blockquote>
-<h3 id="this的5条规则"><a href="#this的5条规则" class="headerlink" title="this的5条规则"></a>this的5条规则</h3><blockquote>
-<p>this到底绑定或者引用那个对象环境决定于函数被调用的地方。而函数的调用有着不同的方式，在不同的方式中调用决定this引用的是那个对象。</p>
-</blockquote>
-<p>-&gt;我们一般只研究函数执行的时候里面的this</p>
-<p>-&gt;this是谁和当前的函数在哪执行和在哪定义没有半毛钱的关系</p>
-<p><strong>1)看函数执行的时候,函数名之前是否有”.”,有的话”.”前面是谁this就是谁,没有的话this就是window</strong></p>
-<p>oDiv.onclick=function(){</p>
-<p>//匿名函数中的this-&gt;oDiv<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">fn();//fn函数中的this-&gt;window</div><div class="line"></div><div class="line">&#125;;</div><div class="line"></div><div class="line">[].slice(0);//-&gt;slice中的this是[]</div><div class="line"></div><div class="line">[].__proto__.slice(0);//-&gt;slice中的this是Array.prototype</div><div class="line"></div><div class="line">--&gt;我们自己在数组原型中编写的方法,一般情况下我们函数中的this就是当前我们要操作的这个元素</div><div class="line"></div><div class="line">Array.prototype.distinct=function()&#123;</div><div class="line"></div><div class="line">//this-&gt;我们当前要操作的这个数组</div><div class="line"></div><div class="line">&#125;;</div><div class="line"></div><div class="line">[1,2,2,3,1,2,3,2,1].distinct();</div></pre></td></tr></table></figure></p>
-<p><strong>2)自执行函数中的this永远是window</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">(function()&#123; //this-&gt;window &#125;)();</div><div class="line"></div><div class="line">~function()&#123; //this-&gt;window &#125;();</div><div class="line"></div><div class="line">window.setTimeout(function()&#123;</div><div class="line"></div><div class="line">//this-&gt;window</div><div class="line"></div><div class="line">&#125;,10);</div><div class="line"></div><div class="line">ary.sort(function(a,b)&#123;</div><div class="line"></div><div class="line">//第一个匿名函数(参数)在执行的时候里面的 this-&gt;window</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line">ary.forEach(function()&#123;</div><div class="line"></div><div class="line">//第一个匿名函数(参数)在执行的时候里面的 this-&gt;window</div><div class="line"></div><div class="line">//但是如果context传递了值(第二个参数传递值了)那么这个方法中的this就是context</div><div class="line"></div><div class="line">&#125;,context);</div><div class="line"></div><div class="line">str.replace(reg,function()&#123;</div><div class="line"></div><div class="line">//this-&gt;window</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p><strong>3)给元素的某一个事件绑定方法,当事件触发的时候,方法中的this是当前元素本身</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">//[DOM零级事件绑定]</div><div class="line"></div><div class="line">oDiv.onclick=function()&#123;</div><div class="line"></div><div class="line">//this-&gt;oDiv</div><div class="line"></div><div class="line">&#125;;</div><div class="line"></div><div class="line">//[DOM二级事件绑定]</div><div class="line"></div><div class="line">oDiv.addEventListener(&quot;click&quot;,function()&#123;</div><div class="line"></div><div class="line">//this-&gt;oDiv</div><div class="line"></div><div class="line">&#125;,false);</div><div class="line"></div><div class="line">//在IE6~8下使用attachEvent</div><div class="line"></div><div class="line">oDiv.attachEvent(&quot;click&quot;,function()&#123;</div><div class="line"></div><div class="line">//this-&gt;window</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p><strong>4)在构造函数模式中,我们的this.xxx=xxx中的this是当前的类的一个实例</strong></p>
-<p>function Fn(){</p>
-<p>this.x=100;//this-&gt;f x是给当前实例f增加的私有的属性</p>
-<p>}</p>
-<p>Fn.prototype.getX=function(){</p>
-<p>console.log(this.x);</p>
-<p>};</p>
-<p>var f=new Fn;</p>
-<p>f.getX();//getX中的this-&gt;f</p>
-<p>f.<strong>proto</strong>.getX();//getX中的this-&gt;Fn.prototype</p>
-<p><strong>5)call和apply强制改变this的指向-&gt;以上所有的this情况在遇到call/apply的时候都不好使,都已强制改变的为主</strong></p>
-<p>obj.fn.call(1);//this-&gt;1</p>
-<p>一般情况下,我们执行call方法第一个传递的参数值是谁,那么fn中的this就是谁</p>
-<p>[在非严格模式下]</p>
-<p>第一个参数没有传递值、传递的是null、传递的是undefined fn中的this都是window</p>
-<p>[严格模式下]</p>
-<p>第一个参数传递的是谁this就是谁,传递null/undefined,fn中的this都是对应的null/undefined,不传递值默认也是undefined</p>
-<p><strong>小结</strong></p>
-<ol>
-<li>默认绑定全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"> 2. 隐式调用</div><div class="line">    function fn()&#123;</div><div class="line">    a=1;</div><div class="line">    console.log(this.a)</div><div class="line">&#125;</div><div class="line">var obj = &#123;</div><div class="line">    a=2,</div><div class="line">    fn:fn</div><div class="line">&#125;;</div><div class="line">obj.fn();     //2</div><div class="line"></div><div class="line">//只看倒数第一个小数点·前的对象；</div><div class="line">//即最后一个调用该函数的对象就是传到该函数的上下文；</div><div class="line">function fn()&#123;</div><div class="line">    console.log(this.a)</div><div class="line">    &#125;</div><div class="line">var obj2 = &#123;</div><div class="line"> a:42,</div><div class="line"> fn:fn</div><div class="line"> &#125;</div><div class="line"> var obj1 = &#123;</div><div class="line">    a:2,</div><div class="line">    obj2:obj2</div><div class="line">    &#125;</div><div class="line">obj1.obj2.fn()      //42;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>失去显示绑定<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;</div><div class="line">   cnsole.log(this.a)</div><div class="line">&#125;</div><div class="line">obj1 = &#123;</div><div class="line"> a:2,</div><div class="line"> fn:fn</div><div class="line">&#125;;</div><div class="line">var bar =obj1.fn;</div><div class="line">var a = &quot;全局变量&quot;</div><div class="line"></div><div class="line">bar()   //全局变量</div></pre></td></tr></table></figure></p>
-<ol>
-<li>显式绑定</li>
-</ol>
-<p>即通过call/apply/bind给函数传入this</p>
-<ol>
-<li>new实例绑定</li>
-</ol>
-<p>你以为 你以为的 就是你以为的</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/10/06/求数组中最大，最小值的四种方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1084,6 +892,184 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://life.fengyong.com/2017/09/28/javaScript预解析总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="夏小北">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://life.zhangxingqiu.cn/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读墨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/28/javaScript预解析总结/" itemprop="url">js预解析总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-28T21:06:24+08:00">
+                2017-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javaScript学习总结/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript学习总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>个人学习总结，不当之处欢迎斧正  /手动doge脸</p>
+<h3 id="理解声明和定义"><a href="#理解声明和定义" class="headerlink" title="理解声明和定义"></a>理解声明和定义</h3><p>声明(declare)：告诉浏览器在当前作用域中存在的变量名或者函数名（变量名和函数名以及函数形参都是标识符，通过标识符对值进行获取或存储）；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var sum  //告诉js，让他在内存中寻找一处空白，并给这个空间放置名字为a的书签，此时内存中默认值为undefined；</div></pre></td></tr></table></figure></p>
+<p>定义：从作用域中通过标识符，找到值得存储位置（普通数据类型在栈内存，引用类型在堆内存），并将值存入；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">num = 10;  // 通过num标识符向变量为num的内存地址写入10；原来的默认值就被覆盖了</div></pre></td></tr></table></figure></p>
+<h2 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h2><h3 id="什么是预解析："><a href="#什么是预解析：" class="headerlink" title="什么是预解析："></a>什么是预解析：</h3><blockquote>
+<p>预解析：在当前作用域下,js代码执行之前，浏览器会把带有var和function关键字的提前进行声明（var只声明）或定义（function声明并定义），并在内存中安排好。然后再从上到下执行js语句。</p>
+</blockquote>
+<h3 id="预解释的作用："><a href="#预解释的作用：" class="headerlink" title="预解释的作用："></a>预解释的作用：</h3><p>变量提升（Hoisting）：在JS中，浏览器会把定义在后面的（变量或函数）提升到前面当前作用域的top处。也就是说在当前作用域，中我们在js代码未执行到声明之前就可以使用了； </p>
+<blockquote>
+<p><strong>but</strong> 这种说法是错误的，此处用来方便理解，实际是预解析，作用域和作用域链共同作用的结果；完整解析请看[]</p>
+</blockquote>
+<h3 id="var和function预解释的不同"><a href="#var和function预解释的不同" class="headerlink" title="var和function预解释的不同"></a>var和function预解释的不同</h3><p><strong>var</strong></p>
+<blockquote>
+<p>var在预解释的时候，只进行提前的声明,只要是通过var定义的，不管变量或者函数，都是赋值undefined；</p>
+</blockquote>
+<p><strong>function</strong></p>
+<blockquote>
+<p>function在预解释的时候提前的声明和定义都完成了，但是它储存数据的空间里存储的是字符串，没有任何意义。</p>
+</blockquote>
+<h3 id="全局作用域和局部作用域解析步骤的差异"><a href="#全局作用域和局部作用域解析步骤的差异" class="headerlink" title="全局作用域和局部作用域解析步骤的差异"></a>全局作用域和局部作用域解析步骤的差异</h3><p><em>预解释是发生在当前作用域下的，刚开始的时候我们预解释的是全局作用域，在js中global是window,我们运行函数的时候会形成一个新的私有作用域（开辟新的内存空间）</em></p>
+<p><strong>全局：</strong></p>
+<p>1.查找全局变量声明（包括省略var的隐式全局声明，但不包括函数里面的全局变量）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">console.log(b)  // error b is not defined;</div><div class="line">functon fn()&#123;//注意此处如果是匿名函数，会报错</div><div class="line"> b = 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2.查找函数声明，函数名为全局变量的属性，值为函数引用</p>
+<hr>
+<p><strong>补充：</strong><br>全局作用预下带var和不带var声明变量的的区别：</p>
+<blockquote>
+<p>带var的可以预解析，所以在赋值的前面执行不会报错，<br>不带var的不能进行预解析，在之前执行会报错</p>
+</blockquote>
+<p><strong>局部作用域：</strong><br>1.创建AO对象（活动对象），以及执行上下文（就是局部变量的执行环境）<br>2.查找函数形参及函数内变量声明，形参名及变量名作为AO对象的属性，值为undefined;<br>3.实参形参相统一，实参付给形参<br>查找函数声明函数名为AO对象的属性，值为函数引用</p>
+<blockquote>
+<p>补充局部作用域知识：<br>1.我们知道在js中函数也是一种特殊的对象；函数被创建时，自带一个[[scope]]属性，cope会被此函数的作用域的上级作用域的数据对象填充，也就是说此时scope对象缺少当前的作用域；<br>2.函数执行时创建执行上下文（copy[scope]对象），AO活动对象（当前作用域中的形参名及变量名为AO对象的属性），<br>3.AO对象被推入执行上下文，形成完整的作用域链</p>
+</blockquote>
+<h3 id="预解析需要注意的问题："><a href="#预解析需要注意的问题：" class="headerlink" title="预解析需要注意的问题："></a>预解析需要注意的问题：</h3><p>1.预解析不在同一个变量上重复发生，在预解释的时候，如果名字已经声明过，不需要重新声明，但需要重新赋值，如果变量名和函数名相同，也遵循此规则；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(fn)      //function fn()&#123;alert(1111) &#125;</div><div class="line">var fn = 12;   //var fn === window.fn</div><div class="line">function fn()&#123;</div><div class="line">    alert(1111)</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>2.等号右边的function不会进行预解析</p>
+<p>3.自执行函数不进行预解析</p>
+<p>4.预解析不受其他if或者判断条件影响，即使条件不成立，也会进行预解析</p>
+<p>5.return不影响预解析</p>
+<p>一个有趣的bug<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function toArray2()&#123;</div><div class="line">			 ary = Array.prototype.slice.call(arguments);</div><div class="line">			//a.slice.call(arguments);</div><div class="line">			a = 2255;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		toArray2(1,5,8);  //虽然全局不带var定义了a=2555,如果函数不执行，则无法读取a;</div><div class="line">		console.log(a);</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -1136,7 +1122,7 @@
             
               <a href="/archives">
             
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
